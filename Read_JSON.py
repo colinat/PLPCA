@@ -10,15 +10,18 @@ import pandas as pd
 #with open('datasets/mini-normal1.json', encoding = "utf8") as json_file:
 #    head = [next(json_file) for x in range(N)]
 
-post_files = ['datasets/mafiadata/mini-normal1.json']
-slot_files = ['datasets/mafiadata/mini-normal-slots.json']
+post_files = ['datasets/mafiadata/src/mini-normal1.json']
+slot_files = ['datasets/mafiadata/src/mini-normal-slots.json']
 
 posts = pd.concat(pd.read_json(fn, orient='records') for fn in post_files)
 slots = pd.concat(pd.read_json(fn, orient='records') for fn in slot_files)
 
-game_id = 71796 #Pick a game_id to sandbox
-posts_1game = posts.loc[posts['game_id'] == game_id]
-slots_1game = slots.loc[slots['game_id'] == game_id]
+game_id = [71796] #Pick a game_id to sandbox
+posts_1game = posts.loc[posts['game_id'].isin(game_id)]
+slots_1game = slots.loc[slots['game_id'].isin(game_id)]
+
+#posts_small.to_csv('mafiaposts.csv')
+#slots_small.to_csv('mafiaroles.csv')
 
 # for game 71796, Transcend was a goon.
 # Lets read his comments.

@@ -10,12 +10,12 @@ nlp = spacy.load("en_core_web_sm")
 import pandas as pd
 import os
 
-directory = os.fsencode('datasets/transcripts')
+directory = os.fsencode('datasets/transcripts/By Sector/healthcare/')
 
 for file in os.listdir(directory):
     filename = os.fsdecode(file)
     if filename.endswith(".txt"): 
-        myfile = os.path.join('datasets/transcripts/', filename)
+        myfile = os.path.join('datasets/transcripts/By Sector/healthcare/', filename)
         with open(myfile, 'r') as file:
             mydata = file.readlines()
         
@@ -45,7 +45,7 @@ for file in os.listdir(directory):
                              'Shape': myshape})
         mysentences = pd.DataFrame({'Sentences': sentences})
 
-        mydf.to_csv(''.join(['datasets/transcripts/',filename[:-4],'.csv']))
-        mysentences.to_csv(''.join(['datasets/transcripts/',filename[:-4],'-sentences.csv']))
+        mydf.to_csv(''.join(['datasets/transcripts/By Sector/healthcare/',filename[:-4],'.csv']))
+        mysentences.to_csv(''.join(['datasets/transcripts/By Sector/healthcare/',filename[:-4],'-sentences.csv']))
     else:
         continue

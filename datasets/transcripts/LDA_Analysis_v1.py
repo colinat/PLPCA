@@ -111,51 +111,98 @@ stop_words.extend(['from', 'subject', 're', 'edu', 'use'])
 
 # # 6. Import Data
 
-# In[6]:
+# In[8]:
 
 
-# Import Dataset
-df=pd.read_csv('Illumina Inc_20170131-Text.txt', sep='\t', header=None, names = ["text"])
+import glob
+import os
+
+file_list = glob.glob(os.path.join(os.getcwd(), "healthcare", "*.txt"))
+file_list
 
 
-# In[7]:
+# In[48]:
 
 
-print(df.head())
+filename_list = []
+
+for file_path in file_list:
+    file_name = os.path.basename(file_path)
+    file_name = os.path.splitext(file_name)[0]
+    filename_list.append(file_name)
+    
+print(filename_list)
+
+
+# In[103]:
+
+
+import spacy
+nlp = spacy.load("en_core_web_sm")
+
+corpus = {}
+sentences = []
+for file_path in file_list:
+    file_name = os.path.basename(file_path)
+    file_name = os.path.splitext(file_name)[0]
+    
+    with open(file_path, 'r') as file:
+        mydata = file.readlines()
+        for lines in mydata:
+            doc = nlp(lines)
+            for sent in doc.sents:
+                sentences.append(sent.string.strip())
+                txt = {file_name : sentences}
+                corpus.update(txt)
+       
+
+
+# In[99]:
+
+
+#print(corpus[filename_list[0]]) # able to subset the dict by index nume of filename_list 
 
 
 # # 7. Cleaning Data
 # As you can see there are many noise characters and extra spaces that is quite distracting. Let’s get rid of them using regular expressions.
 
-# In[8]:
+# In[57]:
 
 
-# Convert to list
-data = df.text.values.tolist()
+# subset to list
+data = corpus[filename_list[0]]
+print(filename_list[0])
 
 
-# In[9]:
+# In[108]:
+
+
+for i in range(0,len(filename_list)):
+    data = corpus[filename_list[i]]
+
+
+# In[109]:
 
 
 # Remove Emails
 data = [re.sub('\S*@\S*\s?', '', sent) for sent in data]
 
 
-# In[10]:
+# In[110]:
 
 
 # Remove new line characters
 data = [re.sub('\s+', ' ', sent) for sent in data]
 
 
-# In[11]:
+# In[111]:
 
 
 # Remove distracting single quotes
 data = [re.sub("\'", "", sent) for sent in data]
 
 
-# In[12]:
+# In[112]:
 
 
 pprint(data[:1])
@@ -170,7 +217,7 @@ pprint(data[:1])
 # 
 # Gensim’s simple_preprocess() is great for this. Additionally I have set deacc=True to remove the punctuations.
 
-# In[13]:
+# In[113]:
 
 
 def sent_to_words(sentences):
@@ -180,7 +227,7 @@ def sent_to_words(sentences):
 data_words = list(sent_to_words(data))
 
 
-# In[14]:
+# In[114]:
 
 
 print(data_words[:2])
@@ -193,7 +240,7 @@ print(data_words[:2])
 # 
 # Gensim’s Phrases model can build and implement the bigrams, trigrams, quadgrams and more. The two important arguments to Phrases are min_count and threshold. The higher the values of these param, the harder it is for words to be combined to bigrams.
 
-# In[15]:
+# In[115]:
 
 
 # Build the bigram and trigram models
@@ -205,7 +252,7 @@ bigram_mod = gensim.models.phrases.Phraser(bigram)
 trigram_mod = gensim.models.phrases.Phraser(trigram)
 
 
-# In[16]:
+# In[116]:
 
 
 # See trigram example
@@ -215,7 +262,7 @@ print(trigram_mod[bigram_mod[data_words[0]]])
 # # 10. Remove Stopwords, Make Bigrams and Lemmatize
 # The bigrams model is ready. Let’s define the functions to remove the stopwords, make bigrams and lemmatization and call them sequentially.
 
-# In[17]:
+# In[117]:
 
 
 # Define functions for stopwords, bigrams, trigrams and lemmatization
@@ -237,7 +284,7 @@ def lemmatization(texts, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']):
     return texts_out
 
 
-# In[18]:
+# In[118]:
 
 
 # Let’s call the functions in order.
@@ -249,7 +296,7 @@ data_words_nostops = remove_stopwords(data_words)
 data_words_bigrams = make_bigrams(data_words_nostops)
 
 
-# In[19]:
+# In[119]:
 
 
 # Initialize spacy 'en' model, keeping only tagger component (for efficiency)
@@ -257,7 +304,7 @@ data_words_bigrams = make_bigrams(data_words_nostops)
 nlp = spacy.load('en', disable=['parser', 'ner'])
 
 
-# In[20]:
+# In[120]:
 
 
 # Do lemmatization keeping only noun, adj, vb, adv
@@ -269,7 +316,7 @@ print(data_lemmatized[:2])
 # # 11. Create the Dictionary and Corpus needed for Topic Modeling
 # The two main inputs to the LDA topic model are the dictionary(id2word) and the corpus. Let’s create them.
 
-# In[21]:
+# In[121]:
 
 
 # Create Dictionary
@@ -282,7 +329,7 @@ texts = data_lemmatized
 corpus = [id2word.doc2bow(text) for text in texts]
 
 
-# In[22]:
+# In[122]:
 
 
 # View
@@ -301,7 +348,7 @@ print(corpus[:2])
 # 'addition'
 # Or, you can see a human-readable form of the corpus itself.
 
-# In[23]:
+# In[123]:
 
 
 # Human readable format of corpus (term-frequency)
@@ -317,7 +364,7 @@ print(corpus[:2])
 # 
 # **chunksize** is the number of documents to be used in each training chunk. **update_every** determines how often the model parameters should be updated and **passes** is the total number of training passes.
 
-# In[24]:
+# In[124]:
 
 
 # Build LDA model
@@ -337,14 +384,14 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
 # 
 # You can see the keywords for each topic and the weightage(importance) of each keyword using lda_model.print_topics() as shown next.
 
-# In[25]:
+# In[125]:
 
 
 # Print the Keyword in the 10 topics
 pprint(lda_model.print_topics())
 
 
-# In[26]:
+# In[126]:
 
 
 doc_lda = lda_model[corpus]
@@ -368,14 +415,14 @@ doc_lda = lda_model[corpus]
 # # 14. Compute Model Perplexity and Coherence Score
 # Model perplexity and topic coherence provide a convenient measure to judge how good a given topic model is. In my experience, topic coherence score, in particular, has been more helpful.
 
-# In[27]:
+# In[127]:
 
 
 # Compute Perplexity
 print('\nPerplexity: ', lda_model.log_perplexity(corpus))  # a measure of how good the model is. lower the better.
 
 
-# In[28]:
+# In[128]:
 
 
 # Compute Coherence Score
@@ -387,14 +434,14 @@ print('\nCoherence Score: ', coherence_lda)
 # # 15. Visualize the topics-keywords
 # Now that the LDA model is built, the next step is to examine the produced topics and the associated keywords. There is no better tool than pyLDAvis package’s interactive chart and is designed to work well with jupyter notebooks.
 
-# In[29]:
+# In[129]:
 
 
 # Visualize the topics
 pyLDAvis.enable_notebook()
 
 
-# In[32]:
+# In[150]:
 
 
 vis = pyLDAvis.gensim.prepare(lda_model, corpus, id2word)
@@ -447,7 +494,7 @@ vis
 # 
 # The compute_coherence_values() (see below) trains multiple LDA models and provides the models and their corresponding coherence scores.
 
-# In[35]:
+# In[131]:
 
 
 def compute_coherence_values(dictionary, corpus, texts, limit, start=2, step=3):
@@ -478,14 +525,14 @@ def compute_coherence_values(dictionary, corpus, texts, limit, start=2, step=3):
     return model_list, coherence_values
 
 
-# In[36]:
+# In[132]:
 
 
 # Can take a long time to run.
 model_list, coherence_values = compute_coherence_values(dictionary=id2word, corpus=corpus, texts=data_lemmatized, start=2, limit=40, step=6)
 
 
-# In[37]:
+# In[133]:
 
 
 # Show graph
@@ -498,7 +545,7 @@ plt.legend(("coherence_values"), loc='best')
 plt.show()
 
 
-# In[38]:
+# In[134]:
 
 
 # Choosing the optimal number of LDA topics
@@ -511,7 +558,7 @@ for m, cv in zip(x, coherence_values):
 # 
 # So for further steps I will choose the model with 32 topics itself.
 
-# In[40]:
+# In[135]:
 
 
 # Select the model and print the topics
@@ -529,7 +576,7 @@ pprint(optimal_model.print_topics(num_words=10))
 # 
 # The format_topics_sentences() function below nicely aggregates this information in a presentable table.
 
-# In[41]:
+# In[136]:
 
 
 def format_topics_sentences(ldamodel=lda_model, corpus=corpus, texts=data):
@@ -555,13 +602,13 @@ def format_topics_sentences(ldamodel=lda_model, corpus=corpus, texts=data):
     return(sent_topics_df)
 
 
-# In[42]:
+# In[137]:
 
 
 df_topic_sents_keywords = format_topics_sentences(ldamodel=optimal_model, corpus=corpus, texts=data)
 
 
-# In[43]:
+# In[138]:
 
 
 # Format
@@ -569,7 +616,7 @@ df_dominant_topic = df_topic_sents_keywords.reset_index()
 df_dominant_topic.columns = ['Document_No', 'Dominant_Topic', 'Topic_Perc_Contrib', 'Keywords', 'Text']
 
 
-# In[44]:
+# In[139]:
 
 
 # Show Dominant Topic For Each Document
@@ -579,7 +626,7 @@ print(df_dominant_topic.head(10))
 # # 19. Find the most representative document for each topic
 # Sometimes just the topic keywords may not be enough to make sense of what a topic is about. So, to help with understanding the topic, you can find the documents a given topic has contributed to the most and infer the topic by reading that document. Whew!!
 
-# In[45]:
+# In[140]:
 
 
 # Group top 5 sentences under each topic
@@ -593,21 +640,21 @@ for i, grp in sent_topics_outdf_grpd:
                                             axis=0)
 
 
-# In[46]:
+# In[141]:
 
 
 # Reset Index    
 sent_topics_sorteddf_mallet.reset_index(drop=True, inplace=True)
 
 
-# In[47]:
+# In[142]:
 
 
 # Format
 sent_topics_sorteddf_mallet.columns = ['Topic_Num', "Topic_Perc_Contrib", "Keywords", "Text"]
 
 
-# In[48]:
+# In[143]:
 
 
 # Show Most Representative Topic For Each Document
@@ -619,42 +666,42 @@ print(sent_topics_sorteddf_mallet.head())
 # # 20. Topic distribution across documents
 # Finally, we want to understand the volume and distribution of topics in order to judge how widely it was discussed. The below table exposes that information.
 
-# In[49]:
+# In[144]:
 
 
 # Number of Documents for Each Topic
 topic_counts = df_topic_sents_keywords['Dominant_Topic'].value_counts()
 
 
-# In[50]:
+# In[145]:
 
 
 # Percentage of Documents for Each Topic
 topic_contribution = round(topic_counts/topic_counts.sum(), 4)
 
 
-# In[51]:
+# In[146]:
 
 
 # Topic Number and Keywords
 topic_num_keywords = sent_topics_sorteddf_mallet[['Topic_Num', 'Keywords']]
 
 
-# In[52]:
+# In[147]:
 
 
 # Concatenate Column wise
 df_dominant_topics = pd.concat([topic_num_keywords, topic_counts.sort_index(), topic_contribution.sort_index()], axis=1)
 
 
-# In[53]:
+# In[148]:
 
 
 # Change Column names
 df_dominant_topics.columns = ['Dominant_Topic', 'Topic_Keywords', 'Num_Documents', 'Perc_Documents']
 
 
-# In[54]:
+# In[149]:
 
 
 # Show Topic Volume Distribution
@@ -669,3 +716,9 @@ df_dominant_topics
 # Hope you enjoyed reading this. I would appreciate if you leave your thoughts in the comments section below.
 # 
 # Edit: I see some of you are experiencing errors while using the LDA Mallet and I don’t have a solution for some of the issues. So, I’ve implemented a workaround and more useful topic model visualizations. Hope you will find it helpful.
+
+# In[ ]:
+
+
+
+

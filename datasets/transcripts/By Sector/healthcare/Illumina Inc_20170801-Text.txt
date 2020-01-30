@@ -1,0 +1,40 @@
+Thanks, Francis
+As Francis mentioned, revenue grew 10% year-over-year to $662 million
+Sequencing consumables and microarrays exceeded forecast, which led to the outperformance versus our expectations
+Geographically, the Americas grew revenue 8% versus the prior year period, while Europe saw a 15% increase, primarily driven by sequencing consumables
+Asia-Pacific revenue grew 12%
+Continued weakness in Japan was more than offset by 16% shipment growth in greater China, which benefited from NovaSeq, strength in HiSeq X consumables, and continued NextSeq demand from our NIPT customers and partners
+Revenue from sequencing instruments grew 9% year-over-year to $130 million, driven primarily by NovaSeq demand
+Total instrument revenue, which includes microarrays, increased 8% to $136 million
+Consumable revenue represented 61% of total revenue or $402 million, an increase of 6% compared to the prior period
+Sequencing consumable revenue grew 9% year-over-year to $338 million
+As we shared on our Q1 call, we expected customers to continue to ramp down HiSeq and HiSeq X reagent orders during the quarter, instead using inventory on hand as they prepare to integrate NovaSeq into their operations
+As predicted, HiSeq consumables decreased sequentially, while utilization gains in China and translational liquid biopsy studies led to an increase in HiSeq X consumables
+Turing now to gross margin and operating expenses, I will highlight our non-GAAP results
+I encourage you to review the GAAP reconciliation of non-GAAP measures, which can be found in today's earnings release and presentation
+Please note that all subsequent references to net income and earnings per share refer to the results attributable to Illumina stockholders
+Our Q2 non-GAAP gross margin was 67%, up 60 basis points sequentially, driven by improved overhead absorption associated with higher production and decreased inventory reserves, which was partially offset by higher sequencing instrument mix
+Our Q2 guidance contemplated a slight sequential decline in margin based on lower sequencing consumable mix and absorption
+Year-over-year gross margin decreased 540 basis points and was impacted by an increase in array services mix, inventory reserves related to product transitions, and lower instrument margin from the NovaSeq introduction
+As is typical with a new platform, we are actively working on COGS reduction, and expect NovaSeq margin to improve over the next four to six quarters
+Operating expenses equaled $297 million, up $5 million sequentially, as head count adds were partially offset by the deconsolidation of GRAIL's expenses
+We had contemplated certain activities in our Q2 guidance that will now occur in Q3, including Helix's launch
+This timing, as well as new investments initiated given our increased confidence in the full year outlook, are expected to lead to an increase in second half operating expense compared to the first half, with Q3 higher than Q4. Non-GAAP operating margins were 22.1% compared to 17.5% in the first quarter, and lower than the 27.2% reported in the second quarter of last year, due to the previously mentioned drivers impacting gross margin and increased head count
+Excluding GRAIL and Helix, operating margin was 24.4% compared to 22.9% in the first quarter
+We reported second quarter GAAP net income of $128 million and EPS of $0.87 per diluted share, non-GAAP net income was $121 million or $0.82 of EPS, with Helix dilution of $0.05. Cash flow from operations equaled $178 million, which was impacted by outflows of $13 million related to Helix, as well as a significant estimated income tax payment primarily related to the gain on the partial sale of our GRAIL stake in Q1. Improved revenue linearity led to Q2 DSO of 51 days, compared to 56 days last quarter
+Capital expenditures in Q2 were $69 million, and we reported an additional $32 million increase in property and equipment recorded under build-to-suit lease accounting, where such expenses were paid for by the landlord
+Consequently, Q2 free cash flow was $109 million
+We ended the quarter with approximately $1.9 billion in cash and short-term investments
+Turning to guidance, based on our strong first half results, we now project approximately 12% total company revenue growth and full-year GAAP earnings per diluted share of $5.36 to $5.46. We are reiterating our non-GAAP EPS guidance of $3.60 to $3.70, as a result of lower gross margin expectations given updated mix and higher NovaSeq revenue projections, as well as increased operating expense
+In closing, I am pleased with our strong second quarter results, the continued success of the NovaSeq launch, and the positive outlook for the rest of the year
+Thank you for your time
+We will now move to the Q&A session
+To allow full participation, please ask one question and rejoin the queue if you have additional questions
+Operator, we will now open the lines
+Yeah, Helix was more of a timing, Tycho, from Q2 into Q3 because of the launch in Q3. But as I mentioned in the prepared remarks, given the increased revenue projections, we have increased some of the investments in the back half and so now we will have a growth in the second half compared to the first half in terms of operating expenses
+Yeah, that's right
+We do have a ramp-up in the second half
+And I think it's really driven by a couple of factors
+One is the ramp-up in NovaSeq as – NovaSeq instruments – as Francis mentioned, as well as the ramp-up in NovaSeq consumables
+And partially offsetting that, there is going to be a reduction in the HiSeq and HiSeq X placements and the offsetting decline in consumables as well
+So, you have these moving parts, but outweighed by the growth related to NovaSeq instruments and consumables

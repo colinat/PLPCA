@@ -55,6 +55,6 @@ for sector in sectors:
             mysentences = pd.DataFrame({'Sentences': sentences})
     
             mydf.to_csv(''.join(['datasets/transcripts/By Sector/', sector, '/', filename[:-4],'.csv']))
-            mysentences.to_csv(''.join(['datasets/transcripts/By Sector/', sector, '/', filename[:-4],'-sentences.csv']))
+            # mysentences.to_csv(''.join(['datasets/transcripts/By Sector/', sector, '/', filename[:-4],'-sentences.csv']))
         else:
             continue

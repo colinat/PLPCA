@@ -100,6 +100,12 @@ fluidPage(theme = "bootstrap.css",
            ))
   ),
   fluidRow(
-    DT::DTOutput("sampletable")
+    column(4,
+           plotOutput("completion", width = "100%", height = "400px")),
+    column(4,
+           plotOutput("sentiment_count", width = "100%", height = "400px")),
+    column(4,
+           plotOutput("e_sentiment_count", width = "100%", height = "400px"))
+           
   )
 )

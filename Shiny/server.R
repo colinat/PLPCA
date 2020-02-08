@@ -5,17 +5,17 @@
 #deployApp()
 #terminateApp()
 
-# setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-library(dplyr)
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+library(tidyverse)
 library(shiny)
 library(shinyjs)
 library(stringr)
 library(RSQLite)
 library(DT)
 
-# mydbconn = dbConnect(RSQLite::SQLite(), "healthcare.db")
-# query = paste0("SELECT * FROM infotable")
-# annotate_text = dbGetQuery(mydbconn, query)
+mydbconn = dbConnect(RSQLite::SQLite(), "healthcare.db")
+query = paste0("SELECT * FROM infotable")
+annotate_text = dbGetQuery(mydbconn, query)
 
 updatedb = function(my_inputs, rvs) {
   rvs$annotate_text[rvs$mytext[1],"Aspects"] = paste(my_inputs$aspect1, collapse = ', ')
@@ -109,10 +109,29 @@ function(input, output, session) {
   output$line4 = renderText({rvs$annotate_text$mydata[rvs$mytext[4]]})
   output$line5 = renderText({rvs$annotate_text$mydata[rvs$mytext[5]]})
   
-  output$sampletable = DT::renderDataTable(rvs$annotate_text[rvs$mytext,], options = list(dom = 't'))
+  output$completion = renderPlot(rvs$annotate_text %>%
+                                   group_by(!is.na(Aspects)) %>%
+                                   summarize(complete = n()) %>%
+                                   `colnames<-`(c('Completed','count')) %>%
+                                   ggplot(aes(x=Completed, y = count)) +
+                                   geom_bar(stat = 'identity'))
+  output$sentiment_count = renderPlot(rvs$annotate_text %>%
+                                     filter(!is.na(Sentiment)) %>%
+                                     group_by(Sentiment) %>%
+                                     summarize(count = n()) %>%
+                                     ggplot(aes(x = factor(Sentiment), y = count)) +
+                                     geom_bar(stat = 'identity'))
+
+  output$e_sentiment_count = renderPlot(rvs$annotate_text %>%
+                                        filter(!is.na(`Emotional Sentiment`)) %>%
+                                        group_by(`Emotional Sentiment`) %>%
+                                        summarize(count = n()) %>%
+                                        ggplot(aes(x = factor(`Emotional Sentiment`), y = count)) +
+                                        geom_bar(stat = 'identity'))
   
   session$onSessionEnded(function() {
     # dbDisconnect(mydbconn)
     print('Hello, the session has ended')
   })
 }
+

@@ -1,10 +1,10 @@
-Not Applicable
+Not_Applicable
 NIL
-Business Prospect
+Business_Prospect
 Earnings
-Sales or Revenue
+Sales_Revenue
 Debt
-Global Expansion or International Business
+Global_Expansion
 Competition
-Products or Services
-Share buybacks or Dividends
+Products_Services
+Share_Buybacks_Dividends

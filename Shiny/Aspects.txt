@@ -2,11 +2,10 @@ not_applicable
 NIL
 sales
 earnings
-expenses
-cashflows
-debt
+op_costs
 products_services
-global_expansion
+organic_expansion
+acquisitions
 competition
-operation_risks
-shareholder_returns
+op_risks
+debt

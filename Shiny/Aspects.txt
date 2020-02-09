@@ -8,4 +8,3 @@ organic_expansion
 acquisitions
 competition
 op_risks
-debt

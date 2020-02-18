@@ -1,21 +1,9 @@
 #install.packages('rsconnect')
-#rsconnect::setAccountInfo(name='nelsonljs', token='F72CC8AF77392083ACC8DD349F12289D', secret='cSWNeJd1d0trSXcFiA9L0Pmhj6vXfmGp7qyQi4Xc')
+#rsconnect::setAccountInfo(name='', token='', secret='')
 #to deploy the app
 #library(rsconnect)
 #deployApp()
 #terminateApp()
-
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-library(tidyverse)
-library(shiny)
-library(shinyjs)
-library(stringr)
-library(RSQLite)
-library(DT)
-
-mydbconn = dbConnect(RSQLite::SQLite(), "healthcare.db")
-query = paste0("SELECT * FROM infotable")
-annotate_text = dbGetQuery(mydbconn, query)
 
 updatedb = function(my_inputs, rvs) {
   rvs$annotate_text[rvs$mytext[1],"Aspects"] = paste(my_inputs$aspect1, collapse = ', ')
@@ -37,10 +25,6 @@ updatedb = function(my_inputs, rvs) {
   rvs$annotate_text[rvs$mytext[5],"Aspects"] = paste(my_inputs$aspect5, collapse = ', ')
   rvs$annotate_text[rvs$mytext[5],"Sentiment"] = my_inputs$sentiment5
   rvs$annotate_text[rvs$mytext[5],"Emotional Sentiment"] = my_inputs$e_sentiment5
-  
-  mydbconn = dbConnect(RSQLite::SQLite(), my_inputs$db)
-  dbWriteTable(mydbconn, "infotable", rvs$annotate_text, overwrite = TRUE)
-  dbDisconnect(mydbconn)
 }
 
 function(input, output, session) {
@@ -58,7 +42,6 @@ function(input, output, session) {
     enable("Update")
     enable("Refresh")
     enable("Review")
-    dbDisconnect(mydbconn)
     disable("LoadDB")
     disable("db")
   })
@@ -66,8 +49,9 @@ function(input, output, session) {
   observeEvent(input$Update, {
     updatedb(input, rvs)
     reset("text-panel")
-    
     rvs$mytext = sample(which(is.na(rvs$annotate_text$Aspects)),5)
+    
+    dbWriteTable(mydbconn, "infotable", rvs$annotate_text, overwrite = TRUE)
   })
   
   observeEvent(input$Refresh, {
@@ -130,7 +114,7 @@ function(input, output, session) {
                                         geom_bar(stat = 'identity'))
   
   session$onSessionEnded(function() {
-    # dbDisconnect(mydbconn)
+    dbDisconnect(mydbconn)
     print('Hello, the session has ended')
   })
 }

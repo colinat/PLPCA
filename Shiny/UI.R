@@ -1,10 +1,3 @@
-library(dplyr)
-library(shiny)
-library(shinythemes)
-library(shinyjs)
-library(shinycssloaders)
-library(DT)
-
 ##### Load the db you want to work with.
 mydbs = list.files(pattern = "\\.db$")
 

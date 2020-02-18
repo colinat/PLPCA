@@ -36,7 +36,8 @@ function(input, output, session) {
                                                   "Emotional Sentiment" = character(0)))
   
   observeEvent(input$LoadDB, {
-    mydbconn = dbConnect(RSQLite::SQLite(), input$db)
+    mydbconn <<- dbConnect(RSQLite::SQLite(), input$db)
+    
     rvs$annotate_text = dbGetQuery(mydbconn, "SELECT * FROM infotable")
     rvs$mytext = sample(which(is.na(rvs$annotate_text$Aspects)),5)
     enable("Update")

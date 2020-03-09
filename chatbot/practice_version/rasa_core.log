@@ -1,0 +1,15 @@
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en_core_web_sm'.
+Rasa Core server is up and running on http://localhost:5005
+Failed to run custom action 'action_match_news'. Couldn't connect to the server at 'http://localhost:5055'. Is the server running? Error: HTTPConnectionPool(host='localhost', port=5055): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020E583E4B70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+Encountered an exception while running action 'action_match_news'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en_core_web_sm'.
+Rasa Core server is up and running on http://localhost:5005
+Failed to run custom action 'action_match_news'. Couldn't connect to the server at 'http://localhost:5055'. Is the server running? Error: HTTPConnectionPool(host='localhost', port=5055): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023A4A6542E8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+Encountered an exception while running action 'action_match_news'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en_core_web_sm'.
+Rasa Core server is up and running on http://localhost:5005
+Failed to run custom action 'action_match_news'. Action server responded with a non 200 status code of 404. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 404 Client Error: NOT FOUND for url: http://localhost:5055/
+Encountered an exception while running action 'action_match_news'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.

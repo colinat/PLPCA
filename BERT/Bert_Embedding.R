@@ -26,16 +26,33 @@ library(RBERT)
 library(tensorflow)
 
 
-BERT_PRETRAINED_DIR <- download_BERT_checkpoint("bert_base_uncased")
+
+
 examples <- c("I saw the branch on the bank.",
               "Pick up the branch from the bank.")
 # Total 10 Tokens including [CLS] and [SEP] and punctuation
 
+# Method 1: Specify the BERT Pre-trained Model
 feats <- extract_features(
   examples = examples,
-  model = "bert_base_uncased",
-  ckpt_dir = BERT_PRETRAINED_DIR
-)
+  model = "bert_base_uncased")
+
+# Method 2: Download the BERT model and specify the folder where it is saved
+BERT_PRETRAINED_DIR <- download_BERT_checkpoint("bert_base_uncased")
+
+BERT_PRETRAINED_DIR
+
+feats2 <- extract_features(
+  examples = examples,
+  ckpt_dir = BERT_PRETRAINED_DIR)
+
+
+# Method 3: Use Fine-tuned BERT Model
+
+
+
+
+
 
 # Extract the embeddings
 df = feats$output

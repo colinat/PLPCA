@@ -1,0 +1,28 @@
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hello! How may I be of assistance?"
+  - text: "Hi there! How may I be of service?"
+  - text: "Hi. How can I help you today?"
+
+  utter_welcome:
+  - text: "Glad to be of service"
+  - text: "You are most welcome!"
+  - text: "Happy to help"
+
+  utter_bye:
+  - text: "Goodbye"
+  - text: "Bye! Hope to hear from you again"
+  - text: "Buh-bye!"
+
+  utter_iamabot:
+  - text: "Yes, I am your friendly bot, powered by Rasa, coded by Colin and his team"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

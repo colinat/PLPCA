@@ -16,6 +16,15 @@ def chatbot_response(text):
 #Creating GUI with tkinter
 import tkinter
 from tkinter import *
+
+def chatMsg(msg1, msg2):
+    ChatLog.config(state=NORMAL)
+    ChatLog.insert(END, "You: " + msg1 + '\n\n')
+    ChatLog.config(foreground="#442265", font=("Verdana", 12 ))
+    ChatLog.insert(END, "Bot: " + msg2 + '\n\n')
+    ChatLog.config(state=DISABLED)
+    ChatLog.yview(END)
+    
 def send():
     msg = EntryBox.get("1.0",'end-1c').strip()
     print(msg)
@@ -23,13 +32,14 @@ def send():
     
     if msg != '':
         print("inside if" , msg)
-        ChatLog.config(state=NORMAL)
-        ChatLog.insert(END, "You: " + msg + '\n\n')
-        ChatLog.config(foreground="#442265", font=("Verdana", 12 ))
-        res = chatbot_response(msg)
-        ChatLog.insert(END, "Bot: " + res + '\n\n')
-        ChatLog.config(state=DISABLED)
-        ChatLog.yview(END)
+        msg1 = msg
+        msg2 = chatbot_response(msg)
+        chatMsg(msg1, msg2)
+    else:
+        msg1 = msg
+        msg2 = "Msg is blank!!!"
+        chatMsg(msg1, msg2)    
+        
         
 base = Tk()
 base.title("ChatBot")
@@ -52,5 +62,12 @@ EntryBox = Text(base, bd=0, bg="white",width="29", height="5", font="Arial")
 scrollbar.place(x=376,y=6, height=386)
 ChatLog.place(x=6,y=6, height=386, width=370)
 EntryBox.place(x=128, y=401, height=90, width=265)
+EntryBox.config(foreground="#442265", font=("Verdana", 14 ))
+
 SendButton.place(x=6, y=401, height=90)
+
+ChatLog.config(state=NORMAL)
+ChatLog.insert(END, "Bot: " + "Hello there!!!" + '\n\n')
+ChatLog.config(foreground="#442265", font=("Verdana", 12 ))
+ChatLog.config(state=DISABLED)
 base.mainloop()

@@ -13086,7 +13086,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>rm -rf NLP_Colab
@@ -13123,7 +13123,7 @@ Unpacking objects: 100% (66/66), done.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
@@ -13164,17 +13164,9 @@ or ensure your notebook will continue to use TensorFlow 1.x via the <code>%tenso
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">SystemError</span>                               Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-2-a532c2b9b173&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> device_name <span class="ansi-blue-fg">=</span> tf<span class="ansi-blue-fg">.</span>test<span class="ansi-blue-fg">.</span>gpu_device_name<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">if</span> device_name <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;/device:GPU:0&#39;</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg">   </span><span class="ansi-green-fg">raise</span> SystemError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;GPU device not found&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Found GPU at: {}&#39;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>device_name<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">SystemError</span>: GPU device not found</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Found GPU at: /device:GPU:0
+</pre>
 </div>
 </div>
 
@@ -13184,7 +13176,7 @@ or ensure your notebook will continue to use TensorFlow 1.x via the <code>%tenso
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install pytorch-pretrained-bert pytorch-nlp -q
@@ -13204,8 +13196,8 @@ or ensure your notebook will continue to use TensorFlow 1.x via the <code>%tenso
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>     |████████████████████████████████| 133kB 2.8MB/s 
-     |████████████████████████████████| 92kB 11.0MB/s 
+<pre>     |████████████████████████████████| 133kB 9.1MB/s eta 0:00:01
+     |████████████████████████████████| 92kB 6.4MB/s eta 0:00:011
 </pre>
 </div>
 </div>
@@ -13216,7 +13208,7 @@ or ensure your notebook will continue to use TensorFlow 1.x via the <code>%tenso
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
@@ -13237,28 +13229,10 @@ or ensure your notebook will continue to use TensorFlow 1.x via the <code>%tenso
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Using TensorFlow backend.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
@@ -13276,41 +13250,15 @@ or ensure your notebook will continue to use TensorFlow 1.x via the <code>%tenso
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">RuntimeError</span>                              Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-5-310c9020eba6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> device <span class="ansi-blue-fg">=</span> torch<span class="ansi-blue-fg">.</span>device<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;cuda&#34;</span> <span class="ansi-green-fg">if</span> torch<span class="ansi-blue-fg">.</span>cuda<span class="ansi-blue-fg">.</span>is_available<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">else</span> <span class="ansi-blue-fg">&#34;cpu&#34;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> n_gpu <span class="ansi-blue-fg">=</span> torch<span class="ansi-blue-fg">.</span>cuda<span class="ansi-blue-fg">.</span>device_count<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>torch<span class="ansi-blue-fg">.</span>cuda<span class="ansi-blue-fg">.</span>get_device_name<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-green-fg">/usr/local/lib/python3.6/dist-packages/torch/cuda/__init__.py</span> in <span class="ansi-cyan-fg">get_device_name</span><span class="ansi-blue-fg">(device)</span>
-<span class="ansi-green-intense-fg ansi-bold">    302</span>             <span class="ansi-green-fg">if</span> <span class="ansi-blue-fg">:</span>attr<span class="ansi-blue-fg">:</span><span class="ansi-red-fg">`</span>device<span class="ansi-red-fg">`</span> <span class="ansi-green-fg">is</span><span class="ansi-red-fg"> </span><span class="ansi-red-fg">`</span><span class="ansi-red-fg">`</span><span class="ansi-green-fg">None</span><span class="ansi-red-fg">`</span><span class="ansi-red-fg">`</span> <span class="ansi-blue-fg">(</span>default<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>
-<span class="ansi-green-intense-fg ansi-bold">    303</span>     &#34;&#34;&#34;
-<span class="ansi-green-fg">--&gt; 304</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> get_device_properties<span class="ansi-blue-fg">(</span>device<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>name
-<span class="ansi-green-intense-fg ansi-bold">    305</span> 
-<span class="ansi-green-intense-fg ansi-bold">    306</span> 
 
-<span class="ansi-green-fg">/usr/local/lib/python3.6/dist-packages/torch/cuda/__init__.py</span> in <span class="ansi-cyan-fg">get_device_properties</span><span class="ansi-blue-fg">(device)</span>
-<span class="ansi-green-intense-fg ansi-bold">    323</span> 
-<span class="ansi-green-intense-fg ansi-bold">    324</span> <span class="ansi-green-fg">def</span> get_device_properties<span class="ansi-blue-fg">(</span>device<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 325</span><span class="ansi-red-fg">     </span>_lazy_init<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>  <span class="ansi-red-fg"># will define _get_device_properties and _CudaDeviceProperties</span>
-<span class="ansi-green-intense-fg ansi-bold">    326</span>     device <span class="ansi-blue-fg">=</span> _get_device_index<span class="ansi-blue-fg">(</span>device<span class="ansi-blue-fg">,</span> optional<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    327</span>     <span class="ansi-green-fg">if</span> device <span class="ansi-blue-fg">&lt;</span> <span class="ansi-cyan-fg">0</span> <span class="ansi-green-fg">or</span> device <span class="ansi-blue-fg">&gt;=</span> device_count<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.6/dist-packages/torch/cuda/__init__.py</span> in <span class="ansi-cyan-fg">_lazy_init</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">    195</span>                 &#34;Cannot re-initialize CUDA in forked subprocess. &#34; + msg)
-<span class="ansi-green-intense-fg ansi-bold">    196</span>         _check_driver<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 197</span><span class="ansi-red-fg">         </span>torch<span class="ansi-blue-fg">.</span>_C<span class="ansi-blue-fg">.</span>_cuda_init<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    198</span>         _cudart <span class="ansi-blue-fg">=</span> _load_cudart<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    199</span>         _cudart<span class="ansi-blue-fg">.</span>cudaGetErrorName<span class="ansi-blue-fg">.</span>restype <span class="ansi-blue-fg">=</span> ctypes<span class="ansi-blue-fg">.</span>c_char_p
-
-<span class="ansi-red-fg">RuntimeError</span>: cuda runtime error (100) : no CUDA-capable device is detected at /pytorch/aten/src/THC/THCGeneral.cpp:50</pre>
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Tesla P100-PCIE-16GB&#39;</pre>
 </div>
+
 </div>
 
 </div>
@@ -13845,7 +13793,7 @@ Epoch 1: 100% 3592/3592 [35:06&lt;00:00,  2.04it/s, Loss: 1.93704]2020-03-08 13:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load a trained model and vocabulary that you have fine-tuned</span>
@@ -13870,7 +13818,7 @@ Epoch 1: 100% 3592/3592 [35:06&lt;00:00,  2.04it/s, Loss: 1.93704]2020-03-08 13:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14273,7 +14221,7 @@ input_type_ids=input_type_ids))</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">seq_length</span> <span class="o">=</span> <span class="mi">180</span> 
@@ -14485,7 +14433,7 @@ input_type_ids=input_type_ids))</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">all_vec</span><span class="p">))</span>
@@ -14516,7 +14464,7 @@ input_type_ids=input_type_ids))</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_vec</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">all_vec</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">179</span><span class="p">][</span><span class="mi">767</span><span class="p">]</span> <span class="c1"># last vector value of the all_vec</span>
@@ -14532,7 +14480,7 @@ input_type_ids=input_type_ids))</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14549,7 +14497,7 @@ input_type_ids=input_type_ids))</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
@@ -19584,7 +19532,7 @@ input_type_ids=input_type_ids))</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
@@ -19600,7 +19548,7 @@ input_type_ids=input_type_ids))</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[45]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -19617,7 +19565,7 @@ input_type_ids=input_type_ids))</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="mi">66</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
@@ -19668,7 +19616,7 @@ growth
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Zip up the folder and copy zip file to Google Drive</span>
@@ -19701,7 +19649,7 @@ growth
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;First 5 vector values for each instance&#39;</span><span class="p">)</span>
@@ -19740,7 +19688,7 @@ positive[-1.116173505783081, 1.1687368154525757, 0.39721038937568665, 1.05493533
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">cosine</span>

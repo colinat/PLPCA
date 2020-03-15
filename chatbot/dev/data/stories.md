@@ -13,3 +13,7 @@
 ## bot challenge
 * bot_challenge
   - utter_iamabot
+
+## emotionscore
+* emotionscore
+  - utter_emotion

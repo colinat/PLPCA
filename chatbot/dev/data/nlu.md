@@ -8,6 +8,11 @@
 - hi again
 - hi folks
 
+## intent:emotionscore
+- What are some sentences that reflect high emotions?
+- Is the CEO confident?
+- Is the tone of the CEO confident?
+
 ## intent:goodbye
 - goodbye
 - goodnight

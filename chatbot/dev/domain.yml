@@ -3,6 +3,7 @@ intents:
   - goodbye
   - thanks
   - bot_challenge
+  - emotionscore
 
 responses:
   utter_greet:
@@ -22,6 +23,9 @@ responses:
 
   utter_iamabot:
   - text: "Yes, I am your friendly bot, powered by Rasa, coded by Colin and his team"
+  
+  utter_emotion:
+  - text: "Emotion is bad!"
 
 session_config:
   session_expiration_time: 60

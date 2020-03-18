@@ -1,0 +1,138 @@
+[
+  {
+    "text": "bonjour",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.4971947968006134
+    }
+  },
+  {
+    "text": "ey boss",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5836247801780701
+    }
+  },
+  {
+    "text": "good evening",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.7770878076553345
+    }
+  },
+  {
+    "text": "greet",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.838652491569519
+    }
+  },
+  {
+    "text": "greetings",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.4336658716201782
+    }
+  },
+  {
+    "text": "halloooo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.7542825937271118
+    }
+  },
+  {
+    "text": "hello is anybody there",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.5203309655189514
+    }
+  },
+  {
+    "text": "hello, my name is Charles Pfeffer",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.5601904988288879
+    }
+  },
+  {
+    "text": "i am Karen Mease",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.9686203002929688
+    }
+  },
+  {
+    "text": "yo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6214944124221802
+    }
+  },
+  {
+    "text": "yoo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9408131241798401
+    }
+  },
+  {
+    "text": "What are some sentences that reflect high emotions?",
+    "intent": "emotionscore",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.6718706488609314
+    }
+  },
+  {
+    "text": "Is the CEO confident?",
+    "intent": "emotionscore",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.5218764543533325
+    }
+  },
+  {
+    "text": "Is the tone of the CEO confident?",
+    "intent": "emotionscore",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.7646512389183044
+    }
+  },
+  {
+    "text": "thanks for forum link, I'll check it out",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.6540050506591797
+    }
+  },
+  {
+    "text": "tqvm",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.37593868374824524
+    }
+  },
+  {
+    "text": "TQVM",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5883267521858215
+    }
+  }
+]

@@ -1,72 +1,69 @@
+session_config:
+  session_expiration_time: 60.0
+  carry_over_slots_to_new_session: true
 intents:
-  - greet
-  - goodbye
-  - thanks
-  - inform
-  - query_sentiment
-  - query_summary
-  - affirm
-  - deny
-  - bot_challenge
-
+- greet
+- goodbye
+- thanks
+- inform
+- query_sentiment
+- query_summary
+- affirm
+- deny
+- bot_challenge
 entities:
-  - aspect_type
-  - polarity
-  
+- aspect_type
+- polarity
+- sent_polarity
 slots:
   aspect_type:
     type: text
   polarity:
     type: text
-
-actions:
-  - action_respond_sentiment
-
 responses:
   utter_greet:
-  - text: "Hello! I am your transcript assistant. How can I help?"
-  - text: "Hi! I am your transcript assistant. I can help you with your queries."
-
+  - text: Hello! I am your transcript assistant. How can I help?
+  - text: Hi! I am your transcript assistant. I can help you with your queries.
   utter_did_that_help:
-  - text: "Did that help you?"
-
+  - text: Did that help you?
   utter_suggest_aspect:
-  - text: "Which aspect are you keen to find out about?"
+  - text: Which aspect are you keen to find out about?
     buttons:
-    - title: "Sales"
+    - title: Sales
       payload: '/inform{"aspect_type": "sales"}'
-    - title: "Earnings"
+    - title: Earnings
       payload: '/inform{"aspect_type": "earnings"}'
-    - title: "Operating costs/expenses"
+    - title: Operating costs/expenses
       payload: '/inform{"aspect_type": "op_costs"}'
-    - title: "Business: products/services"
+    - title: 'Business: products/services'
       payload: '/inform{"aspect_type": "products_services"}'
-    - title: "Organic growth/expansion"
+    - title: Organic growth/expansion
       payload: '/inform{"aspect_type": "organic_expansion"}'
-    - title: "Mergers & acquisiions"
+    - title: Mergers & acquisiions
       payload: '/inform{"aspect_type": "acquisitions"}'
-    - title: "Competitive landscape"
+    - title: Competitive landscape
       payload: '/inform{"aspect_type": "competition"}'
-    - title: "Risks"
+    - title: Risks
       payload: '/inform{"aspect_type": "op_risks"}'
-    - title: "Debt/gearing"
+    - title: Debt/gearing
       payload: '/inform{"aspect_type": "debt"}'
-
   utter_ask_aspect:
-  - text: "Specifically which aspect would you be keen in?"
-  - text: "What is the aspect you are interested in?"
-
+  - text: Specifically which aspect would you be keen in?
+  - text: What is the aspect you are interested in?
   utter_can_i_help:
-  - text: "Is there anything else I can help with?"
-  - text: "Any other things that I may help with?"
-
+  - text: Is there anything else I can help with?
+  - text: Any other things that I may help with?
   utter_goodbye:
-  - text: "Bye."
-  - text: "Goodbye."
-
+  - text: Bye.
+  - text: Goodbye.
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa, customised by Colin and his team."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  - text: I am a bot, powered by Rasa, customised by Colin and his team.
+actions:
+- action_respond_sentiment
+- utter_greet
+- utter_did_that_help
+- utter_suggest_aspect
+- utter_ask_aspect
+- utter_can_i_help
+- utter_goodbye
+- utter_iamabot

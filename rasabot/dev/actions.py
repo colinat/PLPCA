@@ -7,6 +7,7 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
+import csv
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
@@ -22,7 +23,15 @@ class ActionGetSentiment(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
+
         aspect = tracker.get_slot("aspect_type")
-        dispatcher.utter_message(text="Hello! I am feeling good.")
+        data_list = [["SN", "Name", "Contribution"],
+                     [1, "Linus Torvalds", "Linux Kernel"],
+                     [2, "Tim Berners-Lee", "World Wide Web"],
+                     [3, "Guido van Rossum", "Python Programming"]]
+        with open('innovators.csv', 'w', newline='') as file:
+            writer = csv.writer(file, delimiter='|')
+            writer.writerows(data_list)
+        dispatcher.utter_message("Hello! I am feeling good on {}".format(aspect))
 
         return []

@@ -52,7 +52,7 @@
 - Will growth rate be expected to reaccelerate from here?
 - Are company [operating costs](aspect_type:op_costs) under control and within expectations?
 - Are we seeing inflationary [costs](aspect_type:op_costs) in the business and how it may be impacting comps?
-- How are company's [expenses](aspect_type_op_costs) trending?
+- How are company's [expenses](aspect_type:op_costs) trending?
 - Is management [optimistic](sent_polarity) about maintaining and expanding [margins](aspect_type:earnings)?
 - Are there risks to current [profit margin](aspect_type:earnings) from any upcoming expenses?
 - Cost-income ratio seems to be trending up what does management feel about this trend in the coming year?
@@ -103,6 +103,9 @@
 ## intent:query_summary
 - What are the primary drivers of [sales](aspect_type)?
 - Any major concerns regarding [sales](aspect_type) that investors should be aware of?
+- Are [earnings](aspect_type) performing in line with expectations? 
+- Why have [sales](aspect_type) not been up to expectations?
+
 
 ## intent:affirm
 - yes
@@ -183,6 +186,8 @@
 ## synonym:debt
 - leverage
 - gearing
+- loan
+- loans
 
 
 

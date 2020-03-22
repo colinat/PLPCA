@@ -16,6 +16,8 @@ entities:
 slots:
   aspect_type:
     type: text
+  polarity:
+    type: text
 
 actions:
   - action_respond_sentiment
@@ -28,6 +30,28 @@ responses:
   utter_did_that_help:
   - text: "Did that help you?"
 
+  utter_suggest_aspect:
+  - text: "Which aspect are you keen to find out about?"
+    buttons:
+    - title: "Sales"
+      payload: '/inform{"aspect_type": "sales"}'
+    - title: "Earnings"
+      payload: '/inform{"aspect_type": "earnings"}'
+    - title: "Operating costs/expenses"
+      payload: '/inform{"aspect_type": "op_costs"}'
+    - title: "Business: products/services"
+      payload: '/inform{"aspect_type": "products_services"}'
+    - title: "Organic growth/expansion"
+      payload: '/inform{"aspect_type": "organic_expansion"}'
+    - title: "Mergers & acquisiions"
+      payload: '/inform{"aspect_type": "acquisitions"}'
+    - title: "Competitive landscape"
+      payload: '/inform{"aspect_type": "competition"}'
+    - title: "Risks"
+      payload: '/inform{"aspect_type": "op_risks"}'
+    - title: "Debt/gearing"
+      payload: '/inform{"aspect_type": "debt"}'
+
   utter_ask_aspect:
   - text: "Specifically which aspect would you be keen in?"
   - text: "What is the aspect you are interested in?"
@@ -37,7 +61,7 @@ responses:
   - text: "Any other things that I may help with?"
 
   utter_goodbye:
-  - text: "Bye. Hope to hear from you again!"
+  - text: "Bye."
   - text: "Goodbye."
 
   utter_iamabot:

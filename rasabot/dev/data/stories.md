@@ -1,4 +1,4 @@
-## query sentiment + aspect: sales
+## query sentiment with aspect
 * greet
   - utter_greet
 * query_sentiment{"aspect_type":"sales"}
@@ -6,78 +6,13 @@
 * thanks
   - utter_can_i_help
   
-## query sentiment + aspect: earnings
+## query sentence
 * greet
   - utter_greet
-* query_sentiment{"aspect_type":"earnings"}
-  - action_respond_sentiment
-* thanks
-  - utter_can_i_help
-  
-## query sentiment + aspect: op_costs
-* greet
-  - utter_greet
-* query_sentiment{"aspect_type":"op_costs"}
-  - action_respond_sentiment
-* thanks
-  - utter_can_i_help
-  
-## query sentiment + aspect: products_services
-* greet
-  - utter_greet
-* query_sentiment{"aspect_type":"products_services"}
-  - action_respond_sentiment
-* thanks
-  - utter_can_i_help
-  
-## query sentiment + aspect: organic_expansion
-* greet
-  - utter_greet
-* query_sentiment{"aspect_type":"organic_expansion"}
-  - action_respond_sentiment
-* thanks
-  - utter_can_i_help
-
-## query sentiment + aspect: acquisitions
-* greet
-  - utter_greet
-* query_sentiment{"aspect_type":"acqusitions"}
-  - action_respond_sentiment
-* thanks
-  - utter_can_i_help
-  
-## query sentiment + aspect: competition
-* greet
-  - utter_greet
-* query_sentiment{"aspect_type":"competition"}
-  - action_respond_sentiment
-* thanks
-  - utter_can_i_help
-  
-## query sentiment + aspect: op_risks
-* greet
-  - utter_greet
-* query_sentiment{"aspect_type":"op_risks"}
-  - action_respond_sentiment
-* thanks
-  - utter_can_i_help
-  
-## query sentiment + aspect: debt
-* greet
-  - utter_greet
-* query_sentiment{"aspect_type":"debt"}
-  - action_respond_sentiment
-* thanks
-  - utter_can_i_help
-
-
-## query sentiment + no aspect
-* greet
-  - utter_greet
-* query_sentiment
+* query_sentence
   - utter_suggest_aspect
 * inform
-  - action_respond_sentiment
+  - action_respond_sentence
 * thanks
   - utter_can_i_help
 

@@ -57,14 +57,14 @@
 ## intent:query_sentiment
 - Should we expect to see a net impact in [sales](aspect_type)?
 - How should we see any impacts on [revenue](aspect_type:sales)?
-- Would the CEO expect the [negative](sent_polarity) trend to reverse?
+- Would the CEO expect the [negative](sent_polarity:negative) trend to reverse?
 - So should we expect a reversal or a benefit in the fourth quarter?
 - Is there expectation for growth to moderate? 
 - Will growth rate be expected to reaccelerate from here?
 - Are company [operating costs](aspect_type:op_costs) under control and within expectations?
 - Are we seeing inflationary [costs](aspect_type:op_costs) in the business and how it may be impacting comps?
 - How are company's [expenses](aspect_type:op_costs) trending?
-- Is management [optimistic](emot_polarity) about maintaining and expanding [margins](aspect_type:earnings)?
+- Is management [optimistic](emot_polarity:confident) about maintaining and expanding [margins](aspect_type:earnings)?
 - Are there risks to current [profit margin](aspect_type:earnings) from any upcoming expenses?
 - Cost-income ratio seems to be trending up what does management [feel](emot_polarity) about this trend in the coming year?
 - Oil prices are rising would these rising [costs](aspect_type:op_costs) be a challenge for the company?
@@ -252,27 +252,11 @@
 - connect to alexa
 - cr
 
-## intent:affirm
-- yes
-- indeed
-- of course
-- that sounds good
-- correct
-
-## intent:deny
-- no
-- never
-- I don't think so
-- don't like that
-- no way
-- not really
-
 ## intent:bot_challenge
 - are you a bot?
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
-
 
 ## synonym:sales
 - revenue
@@ -314,7 +298,8 @@
 
 ## synonym:acquisitions
 - aquisition
-- acquistions
+- acquisituoin
+- buyout
 - M&A 
 - mergers
 

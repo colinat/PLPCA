@@ -1,14 +1,14 @@
-## query sentiment with aspect
+## greet
 * greet
   - utter_greet
+
+## query sentiment with aspect
 * query_sentiment{"aspect_type":"sales"}
   - action_respond_sentiment
 * thanks
   - utter_can_i_help
   
 ## query sentence
-* greet
-  - utter_greet
 * query_sentence
   - utter_suggest_aspect
 * inform
@@ -19,6 +19,14 @@
 ## say goodbye
 * goodbye
   - utter_goodbye
+
+## out_of_scope
+* out_of_scope
+  - utter_out_of_scope
+
+## ask_what_can_u_do
+* ask_what_can_u_do
+  - utter_help
 
 ## bot challenge
 * bot_challenge

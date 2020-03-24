@@ -4,28 +4,33 @@ intents:
   - thanks
   - inform
   - query_sentiment
-  - query_summary
+  - query_sentence
   - affirm
   - deny
   - bot_challenge
 
 entities:
   - aspect_type
-  - polarity
+  - sent_polarity
+  - emot_polarity
   
 slots:
   aspect_type:
     type: text
   sent_polarity:
     type: text
+  emot_polarity:
+    type: text
 
 actions:
   - action_respond_sentiment
+  - action_respond_emotion
+  - action_respond_sentence
 
 responses:
   utter_greet:
-  - text: "Hello! I am your transcript assistant. How can I help?"
-  - text: "Hi! I am your transcript assistant. I can help you with your queries."
+  - text: "Hello! I'm your transcript assistant. You can ask things like: Is management optimistic on earnings"
+  - text: "Hi! I'm your transcript assistant. You can ask me questions like: Is the company confident on its sales."
 
   utter_did_that_help:
   - text: "Did that help you?"

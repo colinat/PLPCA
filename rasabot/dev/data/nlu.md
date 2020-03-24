@@ -101,11 +101,24 @@
 - Any effects on [performance](aspect_type:earnings) with regards to the macro environment?
 
 
-## intent:query_summary
+## intent:query_sentence
 - What are the primary drivers of [sales](aspect_type)?
 - Any major concerns regarding [sales](aspect_type) that investors should be aware of?
 - Are [earnings](aspect_type) performing in line with expectations? 
 - Why have [sales](aspect_type) not been up to expectations?
+- What caused margin [to decline](sent_polarity:negative)?
+- Should we expect to see a net impact in margin?
+- What are factors influencing [gross margin](aspect_type:op_costs)?
+- What are the impacts on [gross margins](aspect_type:op_costs)?
+- Will the guidance of 5% be higher than what the company has done throughout the course of this year?
+- What's driving the more optimistic expectation for [sales](aspect_type)? 
+- What is holding back the [sales](aspect_type) growth this quarter?
+- Any changes in the [sales](aspect_type) trends?
+- What is driving the increase in [costs](aspect_type:op_costs)/favourable drop in costs?
+- Any particular costs that might impact [earnings](aspect_type) going forward investors should be concerned about?
+- What has been the biggest [unexpected](sent_polarity) [cost](aspect_type:op_costs) that has impacted the company in the previous quarter?
+- How is the company planning to reduce [overheads](aspect_type:op_costs) in the near term?
+- Which are some of the [rising costs](sent_polarity:negative) that management foresee will hit the company's [bottom line](aspect_type:earnings) this year?
 
 
 ## intent:affirm

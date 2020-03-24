@@ -46,6 +46,7 @@
 
 ## intent:query_sentiment
 - Should we expect to see a net impact in [sales](aspect_type)?
+- How should we see any impacts on [revenue](aspect_type:sales)?
 - Would the CEO expect the [negative](sent_polarity) trend to reverse?
 - So should we expect a reversal or a benefit in the fourth quarter?
 - Is there expectation for growth to moderate? 

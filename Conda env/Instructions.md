@@ -8,8 +8,6 @@ Open anaconda prompt terminal.
 Run the following command: conda env create -f environment_Grp12NLP.yml
 Run "conda activate rasa"
 
--- Alternative setup approach (using requirements.txt)
-Open anaconda prompt terminal.
-Create a new conda environment by running the following command: conda create --n your_env_name
-Run "conda activate your_env_name"
+
+## Download required packages
 Run "pip install -r requirements.txt" 

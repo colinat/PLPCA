@@ -8,6 +8,8 @@ intents:
   - affirm
   - deny
   - bot_challenge
+  - out_of_scope
+  - ask_what_can_u_do
 
 entities:
   - aspect_type
@@ -32,6 +34,9 @@ responses:
   - text: "Hello! I'm your transcript assistant. You can ask things like: Is management optimistic on earnings"
   - text: "Hi! I'm your transcript assistant. You can ask me questions like: Is the company confident on its sales."
 
+  utter_help:
+  - text: "Basically i can get the general sentiment or emotion tone of management in the transcript. I can also extract sample sentences. You can ask things like: Is management optimistic on earnings? or Is the company confident on sales outlook?"
+ 
   utter_did_that_help:
   - text: "Did that help you?"
 
@@ -66,12 +71,17 @@ responses:
   - text: "Any other things that I may help with?"
 
   utter_goodbye:
-  - text: "Bye."
-  - text: "Goodbye."
+  - text: "Bye. I will still be here."
+  - text: "Goodbye. I will hang around here till you're back."
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa, customised by Colin and his team."
 
+  utter_out_of_scope:
+  - text: "Good one. But I can’t handle that request, sorry."
+  - text: "Not quite a valid query. Try another one."
+  
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

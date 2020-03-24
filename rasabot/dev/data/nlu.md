@@ -33,6 +33,16 @@
 - thanks
 - thnaks
 
+## intent:ask_what_can_u_do
+- What can you do?
+- How can you help me?
+- What can you do
+- How are you able to help me
+- what do u do?
+- what can u do
+- help
+- help me
+
 ## intent:inform
 - [sales](aspect_type)
 - [earnings](aspect_type)
@@ -120,6 +130,127 @@
 - How is the company planning to reduce [overheads](aspect_type:op_costs) in the near term?
 - Which are some of the [rising costs](sent_polarity:negative) that management foresee will hit the company's [bottom line](aspect_type:earnings) this year?
 
+## intent:out_of_scope
+- I want to order food
+- Order me a pizza
+- What is 2 + 2?
+- Who’s the US President?
+- I need a job
+- I am asking you an out of scope question
+- 4 + 2 = ?
+- After registration I see that I have an available balance of 0.00000000. What does this balance represent?
+- Are you ready?
+- But you're an english site :(
+- Can I ask you questions first?
+- Can I die
+- Can I get a hamburger?
+- Can YouTube talk?
+- Can you call me back ?
+- Can you give me your datacenter's password
+- Can you give me your datacenter's password?
+- Can you make sandwiches?
+- Can you please send me an uber
+- Do I have to accept?
+- Do you know Kevin Pelton
+- Find nearest pizzahut
+- Have we met before?
+- HomeBase is advertised as a community. Is there a way to interact with other members of the community?
+- How long does it take to set up a Rasa bot?
+- I already told you! I'm a shitmuncher
+- I am User
+- I am an opioid addic
+- I am an opioid addict
+- I am hungry
+- I am trying to build one, and did some research before, but I have not do hand-on work yet
+- I can barely see this white text on light gray background ...
+- I changed my mind
+- I have installed it
+- I ned a GP in 94301
+- I need a GP in 94301
+- I need a girl friend!
+- I need to eat cake
+- I wan to buy a plane
+- I wanna marry you
+- I want a new laptop
+- I want book a hotel
+- I want french cuisine
+- I want pizza
+- I want to die
+- I want to order pizza
+- I want to use pipe
+- I'm a shitmuncher
+- Is this Goal-Oriented Chatbot?
+- Is today saturday?
+- Mail me the guide
+- Make me a sandwich
+- NLW
+- Nice name
+- Now?
+- Pizza bot
+- Recharge
+- SEL ME SOMETHING
+- The Try it out is not working
+- The weather is good
+- Today
+- Try it out broken
+- What day is it today?
+- What did you eat yesterday?
+- What do you prefer?
+- What is todays date
+- What is your hobbies?
+- What makes you better than a human?
+- What's 1 + 1?
+- What's do YouTube do
+- What's your backend system?
+- Where am I right now?
+- Where am I?
+- Who ?
+- Who are your customers
+- Why don’t you answer?
+- Why is my TRUST score set to 50 after I completed the registration process?
+- Won't you ask me how I am?
+- You'r blue.
+- Kristin, I want to marry you
+- german?
+- a tamed mouse will arrive at your doorstep in the next couple of days
+- aRE YOU SINGLE
+- again?
+- alexa, order 5 tons of natrium chloride
+- and make chicken noises into the phone
+- are the newsletter worth the subscription?
+- are u facebook
+- are u, facebook?
+- are you single?
+- are you dev?
+- are you human ?
+- are you russian?
+- are you sick
+- are you using Rasa Core and NLU ?
+- are you vegan
+- book a ticket
+- but I just told you that :(
+- but if rasa is open source why do you have a sales team
+- buy one please
+- buy groceries
+- call me father
+- can we keep chatting?
+- can you book dinner
+- can you cheer me up
+- can you cook dinner
+- can you give me a cup of coffee
+- can you help me with the docs?
+- can you help me with your docs
+- can you help me with your docs?
+- can you learn from our conversation?
+- can you speak about politic ?
+- can you understand ?
+- cannot see
+- chgfhgh
+- chinese ok?
+- colder
+- common, just try
+- connect to alexa
+- cr
 
 ## intent:affirm
 - yes
@@ -141,6 +272,7 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+
 
 ## synonym:sales
 - revenue

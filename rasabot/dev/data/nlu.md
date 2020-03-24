@@ -129,6 +129,28 @@
 - What has been the biggest [unexpected](sent_polarity) [cost](aspect_type:op_costs) that has impacted the company in the previous quarter?
 - How is the company planning to reduce [overheads](aspect_type:op_costs) in the near term?
 - Which are some of the [rising costs](sent_polarity:negative) that management foresee will hit the company's [bottom line](aspect_type:earnings) this year?
+- What are some management comments on the [bullish](emot_polarity:confident) [earnings](aspect_type:earnings) [outlook](sent_polarity)?
+- Can you elaborate on the reasons behind management's [optimism](emot_polarity:confident)?
+- What is CEO's thoughts on our [competitors](aspect_type:competition)?
+- Can you explain why CEO is [bearish](emot_polarity:negative) on [sales](aspect_type:sales) and outlook of the company?
+- What are the reasons behind the forecast for [rising costs](sent_polarity:negative)?
+- Why is the CEO [upbeat](sent_polarity:positve) on [earnings](aspect_type:earnings)?
+- I wish to know what CEO said about our company outlook for [earnings](aspect_type:earnings)?
+- Any explanation for the [exciting](sent_polarity:positive) outlook?
+- Why is sentiment for [operating costs](aspect_type:op_costs) so [negative](sent_polarity)?
+- Can you tell me why CEO is so [upbeat](sent_polarity:positve) on upcoming performance?
+- Any comments on possible [acquisitions](aspect_type:acquisitions)?
+- Any outlook on where our biggest [costs](aspect_type:op_costs) are going to trend?
+- Why is it that management is [bullish](emot_polarity) on [earnings](aspect_type:earnings)?
+- What are some driving factors behind managements [positive opinion](sent_polarity) on [earnings](aspect_type:earnings)?
+- What is management saying about our [competitors](aspect_type:competition)?
+- What are key things management highlighted about our [borrowings](aspect_type:debt) and [interest costs](aspect_type:debt)?
+- What are important areas CEO highlighted about our key [competitors](aspect_type:competition)?
+- What did CEO say about upcoming [earnings](aspect_type:earnings) forecast?
+- What are some of CEO's views on potential [market share](aspect_type:organic_expansion) increase?
+- Why is outlook for [earnings](aspect_type:earnings) so [bad](sent_polarity:negative)?
+- What are some justifications for [poor](sent_polarity:negative) outlook for [earnings](aspect_type:earnings)?
+
 
 ## intent:out_of_scope
 - I want to order food

@@ -1,0 +1,268 @@
+---
+title: "Building Language Models"
+output: html_notebook
+---
+
+Environment works for R v3.6
+Text mining Project 
+Build Classifier Model for scoring of articles.
+
+Written by Nelson Low (Intern) 21/2/20
+---
+
+This notebook is designed to help maintain the RF classifier model.
+The model uses pretrained GloVe vectors stanford. http://nlp.stanford.edu/data/glove.6B.zip
+
+The loaded rds file is based on the 100dimension GloVe model.
+
+```{r, 1setup}
+# setup chunk
+
+pacman::p_load(tm,SnowballC,wordcloud2,stringr,
+               tidytext,ggplot2,data.table, tokenizers, text2vec, dplyr)
+
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+filename = "C:/Users/nelso/Documents/Data Science/R Projects/NLP Text Summarization/Data/pretrained.6B.100d.rds"
+# load required items
+word_vectors = as.matrix(readRDS(filename))
+mystopwords = stopwords("SMART")
+
+```
+
+Following section to process xlsx file if necessary.
+
+```{r, 2Processing xlsx file for keywords}
+
+# scoring = readxl::read_xlsx("Data/Track II Categories and Key Search Terms.xlsx")
+# mywords = as.character(scoring[6,2])
+# mywords = unlist(str_split(mywords, ", "))
+# mywords #check character vector and adjust.
+# mywords[15] = "deteriorating"
+# mywords = mywords[c(1:14,16:106)]
+# write.table(mywords, "Data/others.txt", sep = "", row.names = FALSE, col.names = FALSE, quote = FALSE)
+
+```
+
+Process the input keywords to initialize the model. Keywords are to be stored in the Data folder with the following syntax: "<domain>.txt" or "<domain>_pos.txt"
+
+```{r, 3Initialize words}
+
+trainset = paste0("Data/",list.files("Data", pattern = ".txt"))
+trainlist = lapply(trainset, readLines)
+names(trainlist) = trainset
+
+```
+
+Initialize the function to convert keyword into word embeddings as necessary. Word embeddings used are likened to a lookup table, since we are using a pretrained model. The function takes a word input and returns a 100D vector.
+
+```{r, 4Construct word embedding function}
+construct_sentence_embedding_avg = function(sentence) {
+  tokens = sentence %>%
+    removeNumbers() %>%
+    str_replace("'", " ") %>%
+    removeWords(mystopwords) %>%
+    removePunctuation() %>%
+    tokenize_words() %>%
+    unlist()
+  
+  # Check if tokens exist in vocabulary.
+  tokens = tokens[tokens %in% rownames(word_vectors)]
+  myembed = colMeans(word_vectors[tokens, , drop = FALSE]) %>%
+    as.matrix() %>% t()
+  
+  return(myembed)
+}
+
+```
+
+Following section allows us to explore the loaded word embeddings. It is *optional* to run.
+
+```{r, 5Explore word embeddings}
+get_context_word = function(text, use_words = TRUE) {
+  
+  embeddings = construct_sentence_embedding_avg(text)
+  cos_sim = sim2(x = word_vectors, 
+                 y = embeddings %>% as.matrix(), 
+                 method = "cosine", norm = "l2")
+  
+  text = text %>%
+    removeNumbers() %>%
+    str_replace("'", " ") %>%
+    removeWords(mystopwords) %>%
+    removePunctuation() %>%
+    tokenize_words() %>%
+    unlist()
+  
+  words = head(sort(cos_sim[,1], decreasing = TRUE), 50)
+  if (!use_words) {words = words[!names(words) %in% text]}
+  head(words,20)
+}
+
+mytext = c("mobile hospital vehicle")
+get_context_word(mytext, FALSE)
+```
+
+Following segment sets up the trainset as necessary. The trainset is setup for each individual component.
+
+```{r, 6Setup Trainset}
+create_trainset = function(word) {
+  neglist = paste0("Data/",word,".txt")
+  poslist = paste0("Data/",word,"_pos.txt")
+  unrelatedlist = paste0("Data/unrelated.txt")
+  
+  neg_vect = lapply(trainlist[[neglist]], construct_sentence_embedding_avg)
+  neg_vect = data.frame(do.call(rbind, neg_vect))
+  neg_vect$word = trainlist[[neglist]]
+  neg_vect$label = 1
+  
+  pos_vect = lapply(trainlist[[poslist]], construct_sentence_embedding_avg)
+  pos_vect = data.frame(do.call(rbind, pos_vect))
+  pos_vect$word = trainlist[[poslist]]
+  pos_vect$label = 0
+  
+  unrelated_vect = lapply(trainlist[[unrelatedlist]], construct_sentence_embedding_avg)
+  unrelated_vect = data.frame(do.call(rbind, unrelated_vect))
+  unrelated_vect$word = trainlist[[unrelatedlist]]
+  unrelated_vect$label = 0
+  
+  return(rbind(neg_vect,pos_vect, unrelated_vect))
+}
+
+character = create_trainset("character")
+capital = create_trainset("capital")
+conditions = create_trainset("conditions")
+collateral = create_trainset("collateral")
+capacity = create_trainset("capacity")
+
+# Creating a concatenated list for total model training.
+
+total_train = rbind(character,
+                    capital,
+                    conditions,
+                    collateral,
+                    capacity)
+
+```
+
+Visualizing the words that are used for each component using the rtsne package.
+t-SNE: t-distributed stochastic neighbor embedding
+It attempts to reduce the 100 dimensions into 2 dimensions to visualize on a 2D plane. The resultant plot allows us to see if any clusters are formed for the words.
+This chunk is *optional* if updating random forest model.
+
+```{r, 7rTSNE, eval=FALSE, include=FALSE}
+
+pacman::p_load(Rtsne)
+
+train = total_train %>%
+  filter(V1 != 0 & label == 1) %>%
+  mutate(component = case_when(word %in% trainlist[["Data/character.txt"]] ~ "character",
+                           word %in% trainlist[["Data/capital.txt"]] ~ "capital",
+                           word %in% trainlist[["Data/conditions.txt"]] ~ "conditions",
+                           word %in% trainlist[["Data/collateral.txt"]] ~ "collateral",
+                           word %in% trainlist[["Data/capacity.txt"]] ~ "capacity"))
+
+train = train[!duplicated(train[,c('word')]),] #remove duplicated words
+
+## Curating the database for analysis with both t-SNE and PCA
+Labels<-train$component
+train$component<-as.factor(train$component)
+## for plotting
+colors = rainbow(length(unique(train$component)))
+names(colors) = unique(train$component)
+
+set.seed(2020)
+## Executing the algorithm on curated data
+tsne <- Rtsne(train[,1:100], dims = 2, perplexity=30, verbose=TRUE, max_iter = 500)
+
+## Plotting
+plot(tsne$Y, t='n', main="tsne")
+text(tsne$Y, labels=train$word, col=colors[train$component])
+
+```
+
+Following chunk tries logistic regression model. Given that there are 100 dimensions, it doesnt seem to work.
+
+```{r, 8glm models}
+# myglm = glm(label ~ . - word, family=binomial, data = character_train)
+# summary(myglm)
+# 
+# character_glm = glm(label ~ . -word, family = binomial, data = character_train)
+# summary(character_glm)
+# 
+# mypred = predict(myglm, newdata = character_train)
+# mypred
+
+```
+
+Random forest models as below seem to work fine. Train individual models in below chunk.
+For now, training individual classifier models is *optional*.
+
+```{r, 9random forest component model}
+
+#Following code is sample for the (character) model.
+pacman::p_load(randomForest)
+
+splitsample = sample(1:nrow(character),floor(0.2*nrow(character)))
+character_test = character[splitsample,]
+character_train = character[-splitsample,]
+
+myrf = randomForest(x = character_train[,1:100], y = as.factor(character_train$label),
+                    importance = TRUE)
+
+#validating
+predict(myrf, character_test[,1:100], type = "prob")
+# predict(myrf, character_test[,1:100])
+# character_test$label
+
+table(character_test$label,predict(myrf, character_test[,1:100]))
+
+```
+
+Below chunk trains a combined model. Combined models are used to score titles for relevency.
+
+```{r, 10random forest combined model}
+
+pacman::p_load(randomForest)
+
+total_train = rbind(character,
+                    capital,
+                    conditions,
+                    collateral,
+                    capacity)
+
+train = total_train %>%
+  filter(V1 != 0)
+
+train = unique(train, by = "word") #remove duplicated words
+
+splitsample = sample(1:nrow(train),floor(0.2*nrow(train)))
+total_test = train[splitsample,]
+total_train = train[-splitsample,]
+
+myrf = randomForest(x = total_train[,1:100], y = as.factor(total_train$label),
+                    importance = TRUE)
+
+#validating
+predict(myrf, total_test[,1:100], type = "prob")
+# predict(myrf, character_test[,1:100])
+# character_test$label
+
+table(total_test$label,predict(myrf, total_test[,1:100]))
+
+```
+
+Based on the random forest model, we can rank the word_vector library for words relevant to our requirements.
+
+Write the wordlist and its relevant probabilities to a csv file for scoring.
+
+```{r, 11Generate word ranking list}
+
+combined_wordlist = predict(myrf, word_vectors, type = "prob")
+head(sort(combined_wordlist[,2], decreasing = TRUE),50)
+
+# write.csv(combined_wordlist[,2], "wordrank.csv")
+```
+
+
+
+

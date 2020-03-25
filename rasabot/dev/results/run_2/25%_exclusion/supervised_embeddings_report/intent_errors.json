@@ -1,0 +1,66 @@
+[
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.4032140076160431
+    }
+  },
+  {
+    "text": "hi again",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.6525941491127014
+    }
+  },
+  {
+    "text": "competition",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.30502402782440186
+    }
+  },
+  {
+    "text": "sales",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.16182273626327515
+    }
+  },
+  {
+    "text": "What caused margin to decline?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.8765576481819153
+    }
+  },
+  {
+    "text": "What are factors influencing gross margin?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.8666666746139526
+    }
+  },
+  {
+    "text": "The weather is good",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.30746063590049744
+    }
+  },
+  {
+    "text": "What makes you better than a human?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.29465392231941223
+    }
+  }
+]

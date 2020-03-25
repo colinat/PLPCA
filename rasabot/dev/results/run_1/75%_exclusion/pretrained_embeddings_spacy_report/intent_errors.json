@@ -1,0 +1,138 @@
+[
+  {
+    "text": "good evening",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.35948703160567025
+    }
+  },
+  {
+    "text": "good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.4441540061958495
+    }
+  },
+  {
+    "text": "cya",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.4382461218294151
+    }
+  },
+  {
+    "text": "see you later",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.5419971452769369
+    }
+  },
+  {
+    "text": "goodbye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.4745284250110825
+    }
+  },
+  {
+    "text": "Thank you",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.4741247905201966
+    }
+  },
+  {
+    "text": "Thank u",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.4083991318009803
+    }
+  },
+  {
+    "text": "What can you do?",
+    "intent": "ask_what_can_u_do",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.5122073801970586
+    }
+  },
+  {
+    "text": "How are you able to help me",
+    "intent": "ask_what_can_u_do",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.4974375741613794
+    }
+  },
+  {
+    "text": "earnings",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.1647863239943059
+    }
+  },
+  {
+    "text": "sales",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.2466915964915366
+    }
+  },
+  {
+    "text": "Will I make money from this stock this year?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.29116351612772196
+    }
+  },
+  {
+    "text": "What are the primary drivers of sales?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.3541208783080296
+    }
+  },
+  {
+    "text": "What are factors influencing gross margin?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.3843744162623698
+    }
+  },
+  {
+    "text": "Are earnings performing in line with expectations?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.3707836455608515
+    }
+  },
+  {
+    "text": "What's driving the more optimistic expectation for sales?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.38126968094173974
+    }
+  },
+  {
+    "text": "The weather is good",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.45640103449339237
+    }
+  }
+]

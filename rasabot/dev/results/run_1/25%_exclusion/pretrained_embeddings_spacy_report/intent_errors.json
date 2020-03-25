@@ -1,0 +1,106 @@
+[
+  {
+    "text": "good evening",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5667795445211087
+    }
+  },
+  {
+    "text": "good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6251748771833805
+    }
+  },
+  {
+    "text": "cya",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.3429564969833938
+    }
+  },
+  {
+    "text": "see you later",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.5107549751646343
+    }
+  },
+  {
+    "text": "What can you do?",
+    "intent": "ask_what_can_u_do",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.5650581849366848
+    }
+  },
+  {
+    "text": "How are you able to help me",
+    "intent": "ask_what_can_u_do",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.4840746105001383
+    }
+  },
+  {
+    "text": "earnings",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.5649939726980039
+    }
+  },
+  {
+    "text": "sales",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentence",
+      "confidence": 0.6341445163981764
+    }
+  },
+  {
+    "text": "There has been some new competitors on the block - What is the CEO's feel towards them?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.5237391044388239
+    }
+  },
+  {
+    "text": "Should we expect to see a net impact in sales?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "query_sentence",
+      "confidence": 0.478809568200658
+    }
+  },
+  {
+    "text": "What are factors influencing gross margin?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.5202812114566284
+    }
+  },
+  {
+    "text": "Are earnings performing in line with expectations?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.696089947047966
+    }
+  },
+  {
+    "text": "What's driving the more optimistic expectation for sales?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.6013194438398369
+    }
+  }
+]

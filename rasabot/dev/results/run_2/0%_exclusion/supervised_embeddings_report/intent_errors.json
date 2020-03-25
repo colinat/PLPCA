@@ -1,0 +1,58 @@
+[
+  {
+    "text": "see you later",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.7894454002380371
+    }
+  },
+  {
+    "text": "How have our acquisitions performed?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.841385543346405
+    }
+  },
+  {
+    "text": "Are we seeing inflationary costs in the business and how it may be impacting comps?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "query_sentence",
+      "confidence": 0.8577000498771667
+    }
+  },
+  {
+    "text": "What caused margin to decline?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.44278374314308167
+    }
+  },
+  {
+    "text": "Any changes in the sales trends?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.3798043727874756
+    }
+  },
+  {
+    "text": "The weather is good",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.32179808616638184
+    }
+  },
+  {
+    "text": "Is this Goal-Oriented Chatbot?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.2629563510417938
+    }
+  }
+]

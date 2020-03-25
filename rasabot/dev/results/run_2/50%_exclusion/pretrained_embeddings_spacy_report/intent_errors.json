@@ -1,0 +1,122 @@
+[
+  {
+    "text": "hi again",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.3313179361209642
+    }
+  },
+  {
+    "text": "good bye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.29984881213275516
+    }
+  },
+  {
+    "text": "Thanks",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.26329181144482133
+    }
+  },
+  {
+    "text": "thanks",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.26329181144482133
+    }
+  },
+  {
+    "text": "what do u do?",
+    "intent": "ask_what_can_u_do",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.7284533334608551
+    }
+  },
+  {
+    "text": "what can u do",
+    "intent": "ask_what_can_u_do",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.5581350965010149
+    }
+  },
+  {
+    "text": "competition",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.7610826971848194
+    }
+  },
+  {
+    "text": "sales",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentence",
+      "confidence": 0.626002993536672
+    }
+  },
+  {
+    "text": "What has been the biggest unexpected cost that has impacted the company in the previous quarter?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.3703942378759769
+    }
+  },
+  {
+    "text": "What caused margin to decline?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.3922464274475217
+    }
+  },
+  {
+    "text": "Any changes in the sales trends?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.41856793252156277
+    }
+  },
+  {
+    "text": "What are factors influencing gross margin?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.4191122755422478
+    }
+  },
+  {
+    "text": "The weather is good",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.25007479115171766
+    }
+  },
+  {
+    "text": "colder",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.3085725832135905
+    }
+  },
+  {
+    "text": "Who’s the US President?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.3932555485645944
+    }
+  }
+]

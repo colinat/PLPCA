@@ -1,0 +1,162 @@
+[
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.689745962534796
+    }
+  },
+  {
+    "text": "hi again",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.6430702190991413
+    }
+  },
+  {
+    "text": "bye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.6915223563201696
+    }
+  },
+  {
+    "text": "see you later",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.4886200446033703
+    }
+  },
+  {
+    "text": "good bye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.5811024600801509
+    }
+  },
+  {
+    "text": "Thanks",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.43854791826861694
+    }
+  },
+  {
+    "text": "thanks",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.43854791826861694
+    }
+  },
+  {
+    "text": "what do u do?",
+    "intent": "ask_what_can_u_do",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.4741017611265243
+    }
+  },
+  {
+    "text": "what can u do",
+    "intent": "ask_what_can_u_do",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.4694714412776956
+    }
+  },
+  {
+    "text": "competition",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.25947181454046425
+    }
+  },
+  {
+    "text": "sales",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.35330784156877376
+    }
+  },
+  {
+    "text": "Can we expect to see accelerating return from the investments?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "query_sentence",
+      "confidence": 0.25519214383973693
+    }
+  },
+  {
+    "text": "How should we see any impacts on revenue?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "query_sentence",
+      "confidence": 0.2503870459080084
+    }
+  },
+  {
+    "text": "What has been the biggest unexpected cost that has impacted the company in the previous quarter?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.36227682596643057
+    }
+  },
+  {
+    "text": "What caused margin to decline?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.34161313799664345
+    }
+  },
+  {
+    "text": "Any changes in the sales trends?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.3286842861221154
+    }
+  },
+  {
+    "text": "What are factors influencing gross margin?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.3417239680021423
+    }
+  },
+  {
+    "text": "The weather is good",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.34183441661473246
+    }
+  },
+  {
+    "text": "What makes you better than a human?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.3096680906329961
+    }
+  },
+  {
+    "text": "Today",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.33832287745820827
+    }
+  }
+]

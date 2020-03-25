@@ -1,0 +1,138 @@
+[
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.16726353764533997
+    }
+  },
+  {
+    "text": "hi again",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.22390079498291016
+    }
+  },
+  {
+    "text": "bye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.15373846888542175
+    }
+  },
+  {
+    "text": "see you later",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.4265124499797821
+    }
+  },
+  {
+    "text": "good bye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.18729953467845917
+    }
+  },
+  {
+    "text": "what do u do?",
+    "intent": "ask_what_can_u_do",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.27256593108177185
+    }
+  },
+  {
+    "text": "what can u do",
+    "intent": "ask_what_can_u_do",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.3362947404384613
+    }
+  },
+  {
+    "text": "competition",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.2173064798116684
+    }
+  },
+  {
+    "text": "sales",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.18159066140651703
+    }
+  },
+  {
+    "text": "What is the general tone of management?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.4779942035675049
+    }
+  },
+  {
+    "text": "How have our acquisitions performed?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.2788699269294739
+    }
+  },
+  {
+    "text": "Is the supply chain disruption in China expected to pose any challenges for company?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.8310534358024597
+    }
+  },
+  {
+    "text": "What caused margin to decline?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.9191436767578125
+    }
+  },
+  {
+    "text": "Any changes in the sales trends?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.268684059381485
+    }
+  },
+  {
+    "text": "What are factors influencing gross margin?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.4158208668231964
+    }
+  },
+  {
+    "text": "can you help me with your docs",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.6155019998550415
+    }
+  },
+  {
+    "text": "can you help me with your docs?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.6155019998550415
+    }
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.20192855596542358
+    }
+  },
+  {
+    "text": "farewell",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.15346844494342804
+    }
+  },
+  {
+    "text": "op_risks",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.18414431810379028
+    }
+  },
+  {
+    "text": "Any major concerns regarding sales that investors should be aware of?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.6375981569290161
+    }
+  },
+  {
+    "text": "What is driving the increase in costs/favourable drop in costs?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.5949656367301941
+    }
+  },
+  {
+    "text": "Should we expect to see a net impact in margin?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.9838355779647827
+    }
+  },
+  {
+    "text": "and make chicken noises into the phone",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.8276433944702148
+    }
+  },
+  {
+    "text": "are the newsletter worth the subscription?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.31187817454338074
+    }
+  },
+  {
+    "text": "can you speak about politic ?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.3297237157821655
+    }
+  },
+  {
+    "text": "The weather is good",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.36538299918174744
+    }
+  },
+  {
+    "text": "can you help me with the docs?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.9993987083435059
+    }
+  },
+  {
+    "text": "can you understand ?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.25116977095603943
+    }
+  },
+  {
+    "text": "SEL ME SOMETHING",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.18706130981445312
+    }
+  },
+  {
+    "text": "can you help me with your docs",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.9997678995132446
+    }
+  }
+]

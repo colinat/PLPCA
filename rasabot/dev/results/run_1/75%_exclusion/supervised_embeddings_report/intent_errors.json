@@ -1,0 +1,146 @@
+[
+  {
+    "text": "cya",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.1767425835132599
+    }
+  },
+  {
+    "text": "see you later",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.8506163954734802
+    }
+  },
+  {
+    "text": "How are you able to help me",
+    "intent": "ask_what_can_u_do",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.9999468326568604
+    }
+  },
+  {
+    "text": "earnings",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.24833308160305023
+    }
+  },
+  {
+    "text": "sales",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentence",
+      "confidence": 0.18609139323234558
+    }
+  },
+  {
+    "text": "Will I make money from this stock this year?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.22713923454284668
+    }
+  },
+  {
+    "text": "Should we expect to see a net impact in sales?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.5279374718666077
+    }
+  },
+  {
+    "text": "Would the CEO expect the negative trend to reverse?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.25331228971481323
+    }
+  },
+  {
+    "text": "What are the primary drivers of sales?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.30307334661483765
+    }
+  },
+  {
+    "text": "What are factors influencing gross margin?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.2184980809688568
+    }
+  },
+  {
+    "text": "Are earnings performing in line with expectations?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.3531663417816162
+    }
+  },
+  {
+    "text": "What's driving the more optimistic expectation for sales?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.8168490529060364
+    }
+  },
+  {
+    "text": "What's 1 + 1?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.3456314206123352
+    }
+  },
+  {
+    "text": "again?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.1731920689344406
+    }
+  },
+  {
+    "text": "can we keep chatting?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.33100372552871704
+    }
+  },
+  {
+    "text": "Who ?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.19588521122932434
+    }
+  },
+  {
+    "text": "The weather is good",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.16535474359989166
+    }
+  },
+  {
+    "text": "After registration I see that I have an available balance of 0.00000000. What does this balance represent?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.6989378333091736
+    }
+  }
+]

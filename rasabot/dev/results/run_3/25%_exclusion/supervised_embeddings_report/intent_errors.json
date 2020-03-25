@@ -1,0 +1,74 @@
+[
+  {
+    "text": "farewell",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.2854934632778168
+    }
+  },
+  {
+    "text": "thnaks",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.2808212637901306
+    }
+  },
+  {
+    "text": "Should we expect to see a net impact in margin?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.999212920665741
+    }
+  },
+  {
+    "text": "and make chicken noises into the phone",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.7280935645103455
+    }
+  },
+  {
+    "text": "are the newsletter worth the subscription?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentence",
+      "confidence": 0.24259182810783386
+    }
+  },
+  {
+    "text": "The weather is good",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6435813903808594
+    }
+  },
+  {
+    "text": "can you help me with the docs?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.998940110206604
+    }
+  },
+  {
+    "text": "SEL ME SOMETHING",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.22450369596481323
+    }
+  },
+  {
+    "text": "can you help me with your docs",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.9991205334663391
+    }
+  }
+]

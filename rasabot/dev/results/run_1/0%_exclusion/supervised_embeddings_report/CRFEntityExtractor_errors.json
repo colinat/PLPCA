@@ -1,0 +1,190 @@
+[
+  {
+    "text": "earnings",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "earnings",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Will I make money from this stock this year?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "make money",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What does management feel about the competitive landscape in the near term for the company?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 25,
+        "value": "feel",
+        "entity": "emot_polarity"
+      },
+      {
+        "start": 36,
+        "end": 57,
+        "value": "competition",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "start": 21,
+        "end": 25,
+        "value": "feel",
+        "entity": "emot_polarity",
+        "confidence": 0.962198298959067,
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Is the global shutdown or protests in the city likely to be detrimental to the operations of the company",
+    "entities": [
+      {
+        "start": 60,
+        "end": 71,
+        "value": "detrimental",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "start": 79,
+        "end": 89,
+        "value": "operations",
+        "entity": "aspect_type",
+        "confidence": 0.6060547459901904,
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "There has been some new competitors on the block - What is the CEO's feel towards them?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 35,
+        "value": "competition",
+        "entity": "aspect_type"
+      },
+      {
+        "start": 69,
+        "end": 73,
+        "value": "feel",
+        "entity": "emot_polarity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "start": 24,
+        "end": 35,
+        "value": "competition",
+        "entity": "aspect_type",
+        "confidence": 0.8716346939678234,
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Would the CEO expect the negative trend to reverse?",
+    "entities": [
+      {
+        "start": 25,
+        "end": 33,
+        "value": "negative",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Is management expected to take on more financing to grow the business?",
+    "entities": [
+      {
+        "start": 39,
+        "end": 48,
+        "value": "debt",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can we expect heightened risks from the economic slowdown",
+    "entities": [
+      {
+        "start": 25,
+        "end": 30,
+        "value": "op_risks",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is the general tone of management?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 24,
+        "value": "tone",
+        "entity": "emot_polarity"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What are factors influencing gross margin?",
+    "entities": [
+      {
+        "start": 29,
+        "end": 41,
+        "value": "op_costs",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Are earnings performing in line with expectations?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 12,
+        "value": "earnings",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "but if rasa is open source why do you have a sales team",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "start": 45,
+        "end": 50,
+        "value": "sales",
+        "entity": "aspect_type",
+        "confidence": 0.8706019804423298,
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  }
+]

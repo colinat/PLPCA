@@ -1,0 +1,122 @@
+[
+  {
+    "text": "competition",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "competition",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "op_risks",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "op_risks",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How are cashflows of the company and can we expect more paring down of debt going forward?",
+    "entities": [
+      {
+        "start": 71,
+        "end": 75,
+        "value": "debt",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Is the company liquidity situation healthy?",
+    "entities": [
+      {
+        "start": 15,
+        "end": 24,
+        "value": "debt",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What does management expect debt trends for the company to be going forward?",
+    "entities": [
+      {
+        "start": 28,
+        "end": 32,
+        "value": "debt",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "The company seem over leverage are there plans to decrease our liabilities?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 30,
+        "value": "debt",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Are there risks to current profit margin from any upcoming expenses?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 40,
+        "value": "earnings",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Would the CEO expect the negative trend to reverse?",
+    "entities": [
+      {
+        "start": 25,
+        "end": 33,
+        "value": "negative",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How are company's expenses trending?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 26,
+        "value": "op_costs",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is driving the increase in costs/favourable drop in costs?",
+    "entities": [
+      {
+        "start": 32,
+        "end": 37,
+        "value": "op_costs",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

@@ -1,0 +1,116 @@
+[
+  {
+    "text": "Is the recent virus outbreak expected to pose huge challenges for the company",
+    "entities": [
+      {
+        "start": 51,
+        "end": 61,
+        "value": "op_risks",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is the general tone of management?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 24,
+        "value": "tone",
+        "entity": "emot_polarity"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Is management expected to take on more financing to grow the business?",
+    "entities": [
+      {
+        "start": 39,
+        "end": 48,
+        "value": "debt",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Is the supply chain disruption in China expected to pose any challenges for company?",
+    "entities": [
+      {
+        "start": 61,
+        "end": 71,
+        "value": "op_risks",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How should we see any impacts on revenue?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 40,
+        "value": "sales",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Are we seeing inflationary costs in the business and how it may be impacting comps?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 32,
+        "value": "op_costs",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What has been the biggest unexpected cost that has impacted the company in the previous quarter?",
+    "entities": [
+      {
+        "start": 26,
+        "end": 36,
+        "value": "unexpected",
+        "entity": "sent_polarity"
+      },
+      {
+        "start": 37,
+        "end": 41,
+        "value": "op_costs",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What caused margin to decline?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 29,
+        "value": "negative",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What are factors influencing gross margin?",
+    "entities": [
+      {
+        "start": 29,
+        "end": 41,
+        "value": "op_costs",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

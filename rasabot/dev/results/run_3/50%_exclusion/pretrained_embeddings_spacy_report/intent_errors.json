@@ -1,0 +1,82 @@
+[
+  {
+    "text": "thanks",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.3811139766294589
+    }
+  },
+  {
+    "text": "thnaks",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4036790364168252
+    }
+  },
+  {
+    "text": "How can you help me?",
+    "intent": "ask_what_can_u_do",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.3884486645951542
+    }
+  },
+  {
+    "text": "competition",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.4290697280684786
+    }
+  },
+  {
+    "text": "Is the company liquidity situation healthy?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "query_sentence",
+      "confidence": 0.3624316255217679
+    }
+  },
+  {
+    "text": "What are the primary drivers of sales?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.7747425832228726
+    }
+  },
+  {
+    "text": "Any major concerns regarding sales that investors should be aware of?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.73369611593079
+    }
+  },
+  {
+    "text": "What is driving the increase in costs/favourable drop in costs?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.7060034417804869
+    }
+  },
+  {
+    "text": "Should we expect to see a net impact in margin?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.5636008609354651
+    }
+  },
+  {
+    "text": "The weather is good",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.29264387306164324
+    }
+  }
+]

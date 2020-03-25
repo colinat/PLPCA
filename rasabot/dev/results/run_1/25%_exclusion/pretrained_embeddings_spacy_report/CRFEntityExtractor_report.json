@@ -1,0 +1,38 @@
+{
+  "sent_polarity": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "aspect_type": {
+    "precision": 0.625,
+    "recall": 0.35714285714285715,
+    "f1-score": 0.45454545454545453,
+    "support": 14
+  },
+  "emot_polarity": {
+    "precision": 0.6666666666666666,
+    "recall": 0.5,
+    "f1-score": 0.5714285714285715,
+    "support": 4
+  },
+  "micro avg": {
+    "precision": 0.6363636363636364,
+    "recall": 0.3181818181818182,
+    "f1-score": 0.4242424242424242,
+    "support": 22
+  },
+  "macro avg": {
+    "precision": 0.4305555555555555,
+    "recall": 0.28571428571428575,
+    "f1-score": 0.341991341991342,
+    "support": 22
+  },
+  "weighted avg": {
+    "precision": 0.5189393939393939,
+    "recall": 0.3181818181818182,
+    "f1-score": 0.39315230224321135,
+    "support": 22
+  }
+}

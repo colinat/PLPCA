@@ -57,7 +57,7 @@
 ## intent:query_sentiment
 - Should we expect to see a net impact in [sales](aspect_type)?
 - How should we see any impacts on [revenue](aspect_type:sales)?
-- Would the CEO expect the [negative](sent_polarity:negative) trend to reverse?
+- Would the CEO expect the [negative](sent_polarity) trend to reverse?
 - So should we expect a reversal or a benefit in the fourth quarter?
 - Is there expectation for growth to moderate? 
 - Will growth rate be expected to reaccelerate from here?
@@ -68,19 +68,19 @@
 - Are there risks to current [profit margin](aspect_type:earnings) from any upcoming expenses?
 - Cost-income ratio seems to be trending up what does management [feel](emot_polarity) about this trend in the coming year?
 - Oil prices are rising would these rising [costs](aspect_type:op_costs) be a challenge for the company?
-- Does the CEO feel [optimistic](emot_polarity) about the rising [costs](aspect_type:op_costs) in the company reversing trend?
+- Does the CEO feel [optimistic](emot_polarity:confident) about the rising [costs](aspect_type:op_costs) in the company reversing trend?
 - How have our [acquisitions](aspect_type) performed?
 - What are plans for new [products](aspect_type:products_services) and services launches going forward?
 - Can we expect to see accelerating return from the investments?
 - Can we expect new product launches or [acquisitions](aspect_type) that can boost earnings in the coming financial year?
 - Is company expected to be active on the merger and acquistion front this year?
-- Will there be any new upcoming new [products](aspect_type) or services launches that we can look forward to?
+- Will there be any new upcoming new [products](aspect_type:products_services) or services launches that we can look forward to?
 - Are earnings from [acquisitions](aspect_type) expected to grow from here?
 - How is the company performing vs our [competitors](aspect_type:competition)?
 - Can we expect to see greater [competition](aspect_type) and operating risks to the company in the coming year? 
 - What does management [feel](emot_polarity) about the [competitive landscape](aspect_type:competition) in the near term for the company?
 - What is the CEO's [feel](emot_polarity) about the new [challengers](aspect_type:competition) in the industry?
-- Is CEO [optimistic](emot_polarity) about the current pandemic [risks](aspect_type:op_risks) subsiding within the next year
+- Is CEO [optimistic](emot_polarity:confident) about the current pandemic [risks](aspect_type:op_risks) subsiding within the next year
 - There has been some new [competitors](aspect_type:competition) on the block - What is the CEO's [feel](emot_polarity) towards them?
 - Can we expect heightened [risks](aspect_type:op_risks) from the economic slowdown 
 - Is the supply chain disruption in China expected to pose any [challenges](aspect_type:op_risks) for company?
@@ -99,11 +99,11 @@
 - Interest rates are trending down are there plans to use more [debt](aspect_type) to grow the business given the low cost of financing?
 - How is the company planning to pay down the [debt](aspect_type) on its balance sheet?
 - What is the general [tone](emot_polarity) of management?
-- Is management [optimistic](emot_polarity)?
+- Is management [optimistic](emot_polarity:confident)?
 - What is the overall [outlook](sent_polarity) for the company as a whole?
 - What is the [outlook](sent_polarity) for share price of the company?
 - How is the broad [sentiment](sent_polarity) of management with regards to company growth?
-- Is CEO [optimistic](emot_polarity) about 2020 for the company
+- Is CEO [optimistic](emot_polarity:confident) about 2020 for the company
 - How far can [stock price](aspect_type:earnings) go this year?
 - Will I [make money](sent_polarity) from this stock this year?
 - Is management [confident](emot_polarity) of beating street expectations for earnings this year?
@@ -121,14 +121,36 @@
 - What are factors influencing [gross margin](aspect_type:op_costs)?
 - What are the impacts on [gross margins](aspect_type:op_costs)?
 - Will the guidance of 5% be higher than what the company has done throughout the course of this year?
-- What's driving the more optimistic expectation for [sales](aspect_type)? 
+- What's driving the more [optimistic](emot_polarity) expectation for [sales](aspect_type)? 
 - What is holding back the [sales](aspect_type) growth this quarter?
 - Any changes in the [sales](aspect_type) trends?
-- What is driving the increase in [costs](aspect_type:op_costs)/favourable drop in costs?
+- What is driving the increase in [costs](aspect_type:op_costs)/[favourable](sent_polarity:positive) drop in costs?
 - Any particular costs that might impact [earnings](aspect_type) going forward investors should be concerned about?
-- What has been the biggest [unexpected](sent_polarity) [cost](aspect_type:op_costs) that has impacted the company in the previous quarter?
+- What has been the biggest [unexpected](sent_polarity:negative) [cost](aspect_type:op_costs) that has impacted the company in the previous quarter?
 - How is the company planning to reduce [overheads](aspect_type:op_costs) in the near term?
 - Which are some of the [rising costs](sent_polarity:negative) that management foresee will hit the company's [bottom line](aspect_type:earnings) this year?
+- What are some management comments on the [bullish](emot_polarity:confident) [earnings](aspect_type:earnings) [outlook](sent_polarity)?
+- Can you elaborate on the reasons behind management's [optimism](emot_polarity:confident)?
+- What is CEO's thoughts on our [competitors](aspect_type:competition)?
+- Can you explain why CEO is [bearish](emot_polarity:negative) on [sales](aspect_type:sales) and outlook of the company?
+- What are the reasons behind the forecast for [rising costs](sent_polarity:negative)?
+- Why is the CEO [upbeat](sent_polarity:positive) on [earnings](aspect_type:earnings)?
+- I wish to know what CEO said about our company outlook for [earnings](aspect_type:earnings)?
+- Any explanation for the [exciting](sent_polarity:positive) outlook?
+- Why is sentiment for [operating costs](aspect_type:op_costs) so [negative](sent_polarity)?
+- Can you tell me why CEO is so [upbeat](sent_polarity:positive) on upcoming performance?
+- Any comments on possible [acquisitions](aspect_type:acquisitions)?
+- Any outlook on where our biggest [costs](aspect_type:op_costs) are going to trend?
+- Why is it that management is [bullish](emot_polarity:confident) on [earnings](aspect_type:earnings)?
+- What are some driving factors behind managements [positive opinion](sent_polarity:positive) on [earnings](aspect_type:earnings)?
+- What is management saying about our [competitors](aspect_type:competition)?
+- What are key things management highlighted about our [borrowings](aspect_type:debt) and [interest costs](aspect_type:debt)?
+- What are important areas CEO highlighted about our key [competitors](aspect_type:competition)?
+- What did CEO say about upcoming [earnings](aspect_type:earnings) forecast?
+- What are some of CEO's views on potential [market share](aspect_type:organic_expansion) increase?
+- Why is outlook for [earnings](aspect_type:earnings) so [bad](sent_polarity:negative)?
+- What are some justifications for [poor](sent_polarity:negative) outlook for [earnings](aspect_type:earnings)?
+
 
 ## intent:out_of_scope
 - I want to order food
@@ -251,6 +273,10 @@
 - common, just try
 - connect to alexa
 - cr
+- is the ceo hungry?
+- are you hungry?
+- I'm stuffing
+
 
 ## intent:bot_challenge
 - are you a bot?

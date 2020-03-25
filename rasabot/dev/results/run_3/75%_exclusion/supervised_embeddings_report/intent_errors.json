@@ -1,0 +1,162 @@
+[
+  {
+    "text": "Hey",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.2100113332271576
+    }
+  },
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.19546003639698029
+    }
+  },
+  {
+    "text": "bye bye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.25214263796806335
+    }
+  },
+  {
+    "text": "farewell",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.19249367713928223
+    }
+  },
+  {
+    "text": "thnaks",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.17117473483085632
+    }
+  },
+  {
+    "text": "op_risks",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.15698041021823883
+    }
+  },
+  {
+    "text": "Is the company liquidity situation healthy?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.3024964928627014
+    }
+  },
+  {
+    "text": "How are company's expenses trending?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.21862739324569702
+    }
+  },
+  {
+    "text": "What are the primary drivers of sales?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.7791076898574829
+    }
+  },
+  {
+    "text": "Any major concerns regarding sales that investors should be aware of?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.5151808857917786
+    }
+  },
+  {
+    "text": "What is driving the increase in costs/favourable drop in costs?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.3293789327144623
+    }
+  },
+  {
+    "text": "Should we expect to see a net impact in margin?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.3851886987686157
+    }
+  },
+  {
+    "text": "I need a girl friend!",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.1680808663368225
+    }
+  },
+  {
+    "text": "How long does it take to set up a Rasa bot?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.4784652888774872
+    }
+  },
+  {
+    "text": "and make chicken noises into the phone",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.5108369588851929
+    }
+  },
+  {
+    "text": "I need to eat cake",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.2154851108789444
+    }
+  },
+  {
+    "text": "can you help me with the docs?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.9842239022254944
+    }
+  },
+  {
+    "text": "Do you know Kevin Pelton",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.3169742822647095
+    }
+  },
+  {
+    "text": "SEL ME SOMETHING",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.4231318235397339
+    }
+  },
+  {
+    "text": "can you help me with your docs",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.9342707991600037
+    }
+  }
+]

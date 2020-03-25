@@ -1,0 +1,755 @@
+[
+  {
+    "text": "Are there risks to current profit margin from any upcoming expenses?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 40,
+        "value": "earnings",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "aspect_type",
+        "start": 10,
+        "end": 15,
+        "extractor": "DIETClassifier",
+        "value": "op_risks",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "aspect_type",
+        "start": 27,
+        "end": 40,
+        "extractor": "DIETClassifier",
+        "value": "earnings",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "aspect_type",
+        "start": 59,
+        "end": 67,
+        "extractor": "DIETClassifier",
+        "value": "op_costs",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Does the CEO feel optimistic about the rising costs in the company reversing trend?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 28,
+        "value": "confident",
+        "entity": "emot_polarity"
+      },
+      {
+        "start": 46,
+        "end": 51,
+        "value": "op_costs",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "emot_polarity",
+        "start": 13,
+        "end": 28,
+        "extractor": "DIETClassifier",
+        "value": "feel optimistic"
+      },
+      {
+        "entity": "aspect_type",
+        "start": 46,
+        "end": 51,
+        "extractor": "DIETClassifier",
+        "value": "op_costs",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can we expect new product launches or acquisitions that can boost earnings in the coming financial year?",
+    "entities": [
+      {
+        "start": 38,
+        "end": 50,
+        "value": "acquisitions",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "aspect_type",
+        "start": 38,
+        "end": 50,
+        "extractor": "DIETClassifier",
+        "value": "acquisitions"
+      },
+      {
+        "entity": "aspect_type",
+        "start": 66,
+        "end": 74,
+        "extractor": "DIETClassifier",
+        "value": "earnings"
+      }
+    ]
+  },
+  {
+    "text": "Can we expect to see greater competition and operating risks to the company in the coming year?",
+    "entities": [
+      {
+        "start": 29,
+        "end": 40,
+        "value": "competition",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "aspect_type",
+        "start": 29,
+        "end": 40,
+        "extractor": "DIETClassifier",
+        "value": "competition"
+      },
+      {
+        "entity": "aspect_type",
+        "start": 45,
+        "end": 60,
+        "extractor": "DIETClassifier",
+        "value": "operating risks"
+      }
+    ]
+  },
+  {
+    "text": "The company seems too highly geared would there be plans to deleverage to reduce interest costs?",
+    "entities": [
+      {
+        "start": 29,
+        "end": 35,
+        "value": "debt",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "aspect_type",
+        "start": 29,
+        "end": 35,
+        "extractor": "DIETClassifier",
+        "value": "debt",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "aspect_type",
+        "start": 90,
+        "end": 95,
+        "extractor": "DIETClassifier",
+        "value": "op_costs",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Interest rates are trending down are there plans to use more debt to grow the business given the low cost of financing?",
+    "entities": [
+      {
+        "start": 61,
+        "end": 65,
+        "value": "debt",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "aspect_type",
+        "start": 61,
+        "end": 65,
+        "extractor": "DIETClassifier",
+        "value": "debt"
+      },
+      {
+        "entity": "aspect_type",
+        "start": 109,
+        "end": 118,
+        "extractor": "DIETClassifier",
+        "value": "debt",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the outlook for share price of the company?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 19,
+        "value": "outlook",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sent_polarity",
+        "start": 12,
+        "end": 19,
+        "extractor": "DIETClassifier",
+        "value": "outlook"
+      },
+      {
+        "entity": "aspect_type",
+        "start": 30,
+        "end": 35,
+        "extractor": "DIETClassifier",
+        "value": "price"
+      }
+    ]
+  },
+  {
+    "text": "Will I make money from this stock this year?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "make money",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sent_polarity",
+        "start": 12,
+        "end": 17,
+        "extractor": "DIETClassifier",
+        "value": "money"
+      },
+      {
+        "entity": "aspect_type",
+        "start": 28,
+        "end": 33,
+        "extractor": "DIETClassifier",
+        "value": "stock"
+      }
+    ]
+  },
+  {
+    "text": "Is management confident of beating street expectations for earnings this year?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 23,
+        "value": "confident",
+        "entity": "emot_polarity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "emot_polarity",
+        "start": 14,
+        "end": 23,
+        "extractor": "DIETClassifier",
+        "value": "confident"
+      },
+      {
+        "entity": "aspect_type",
+        "start": 59,
+        "end": 67,
+        "extractor": "DIETClassifier",
+        "value": "earnings"
+      }
+    ]
+  },
+  {
+    "text": "Are earnings performing in line with expectations?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 12,
+        "value": "earnings",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "aspect_type",
+        "start": 4,
+        "end": 12,
+        "extractor": "DIETClassifier",
+        "value": "earnings"
+      },
+      {
+        "entity": "aspect_type",
+        "start": 27,
+        "end": 31,
+        "extractor": "DIETClassifier",
+        "value": "line"
+      }
+    ]
+  },
+  {
+    "text": "What caused margin to decline?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 29,
+        "value": "negative",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "aspect_type",
+        "start": 12,
+        "end": 18,
+        "extractor": "DIETClassifier",
+        "value": "margin"
+      },
+      {
+        "entity": "sent_polarity",
+        "start": 22,
+        "end": 29,
+        "extractor": "DIETClassifier",
+        "value": "decline"
+      }
+    ]
+  },
+  {
+    "text": "What is driving the increase in costs/favourable drop in costs?",
+    "entities": [
+      {
+        "start": 32,
+        "end": 37,
+        "value": "op_costs",
+        "entity": "aspect_type"
+      },
+      {
+        "start": 38,
+        "end": 48,
+        "value": "positive",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "aspect_type",
+        "start": 57,
+        "end": 62,
+        "extractor": "DIETClassifier",
+        "value": "op_costs",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Any particular costs that might impact earnings going forward investors should be concerned about?",
+    "entities": [
+      {
+        "start": 39,
+        "end": 47,
+        "value": "earnings",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "aspect_type",
+        "start": 15,
+        "end": 20,
+        "extractor": "DIETClassifier",
+        "value": "op_costs",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "aspect_type",
+        "start": 39,
+        "end": 47,
+        "extractor": "DIETClassifier",
+        "value": "earnings"
+      }
+    ]
+  },
+  {
+    "text": "Which are some of the rising costs that management foresee will hit the company's bottom line this year?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 34,
+        "value": "negative",
+        "entity": "sent_polarity"
+      },
+      {
+        "start": 82,
+        "end": 93,
+        "value": "earnings",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sent_polarity",
+        "start": 22,
+        "end": 28,
+        "extractor": "DIETClassifier",
+        "value": "rising"
+      },
+      {
+        "entity": "aspect_type",
+        "start": 29,
+        "end": 34,
+        "extractor": "DIETClassifier",
+        "value": "op_costs",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "aspect_type",
+        "start": 82,
+        "end": 93,
+        "extractor": "DIETClassifier",
+        "value": "earnings",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you explain why CEO is bearish on sales and outlook of the company?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 34,
+        "value": "negative",
+        "entity": "emot_polarity"
+      },
+      {
+        "start": 38,
+        "end": 43,
+        "value": "sales",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "emot_polarity",
+        "start": 27,
+        "end": 34,
+        "extractor": "DIETClassifier",
+        "value": "negative",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "aspect_type",
+        "start": 38,
+        "end": 43,
+        "extractor": "DIETClassifier",
+        "value": "sales"
+      },
+      {
+        "entity": "sent_polarity",
+        "start": 48,
+        "end": 55,
+        "extractor": "DIETClassifier",
+        "value": "outlook"
+      }
+    ]
+  },
+  {
+    "text": "What are the reasons behind the forecast for rising costs?",
+    "entities": [
+      {
+        "start": 45,
+        "end": 57,
+        "value": "negative",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "aspect_type",
+        "start": 52,
+        "end": 57,
+        "extractor": "DIETClassifier",
+        "value": "op_costs",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I wish to know what CEO said about our company outlook for earnings?",
+    "entities": [
+      {
+        "start": 59,
+        "end": 67,
+        "value": "earnings",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sent_polarity",
+        "start": 47,
+        "end": 54,
+        "extractor": "DIETClassifier",
+        "value": "outlook"
+      },
+      {
+        "entity": "aspect_type",
+        "start": 59,
+        "end": 67,
+        "extractor": "DIETClassifier",
+        "value": "earnings"
+      }
+    ]
+  },
+  {
+    "text": "Any explanation for the exciting outlook?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 32,
+        "value": "positive",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sent_polarity",
+        "start": 24,
+        "end": 40,
+        "extractor": "DIETClassifier",
+        "value": "exciting outlook"
+      }
+    ]
+  },
+  {
+    "text": "Why is sentiment for operating costs so negative?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 36,
+        "value": "op_costs",
+        "entity": "aspect_type"
+      },
+      {
+        "start": 40,
+        "end": 48,
+        "value": "negative",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sent_polarity",
+        "start": 7,
+        "end": 16,
+        "extractor": "DIETClassifier",
+        "value": "sentiment"
+      },
+      {
+        "entity": "aspect_type",
+        "start": 21,
+        "end": 36,
+        "extractor": "DIETClassifier",
+        "value": "op_costs",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "sent_polarity",
+        "start": 40,
+        "end": 48,
+        "extractor": "DIETClassifier",
+        "value": "negative"
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me why CEO is so upbeat on upcoming performance?",
+    "entities": [
+      {
+        "start": 30,
+        "end": 36,
+        "value": "positive",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sent_polarity",
+        "start": 30,
+        "end": 36,
+        "extractor": "DIETClassifier",
+        "value": "positive",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "aspect_type",
+        "start": 49,
+        "end": 60,
+        "extractor": "DIETClassifier",
+        "value": "earnings",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What are key things management highlighted about our borrowings and interest costs?",
+    "entities": [
+      {
+        "start": 53,
+        "end": 63,
+        "value": "debt",
+        "entity": "aspect_type"
+      },
+      {
+        "start": 68,
+        "end": 82,
+        "value": "debt",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "aspect_type",
+        "start": 53,
+        "end": 63,
+        "extractor": "DIETClassifier",
+        "value": "debt",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "aspect_type",
+        "start": 77,
+        "end": 82,
+        "extractor": "DIETClassifier",
+        "value": "op_costs",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Why is outlook for earnings so bad?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 27,
+        "value": "earnings",
+        "entity": "aspect_type"
+      },
+      {
+        "start": 31,
+        "end": 34,
+        "value": "negative",
+        "entity": "sent_polarity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sent_polarity",
+        "start": 7,
+        "end": 14,
+        "extractor": "DIETClassifier",
+        "value": "outlook"
+      },
+      {
+        "entity": "aspect_type",
+        "start": 19,
+        "end": 27,
+        "extractor": "DIETClassifier",
+        "value": "earnings"
+      },
+      {
+        "entity": "sent_polarity",
+        "start": 31,
+        "end": 34,
+        "extractor": "DIETClassifier",
+        "value": "negative",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What are some justifications for poor outlook for earnings?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 37,
+        "value": "negative",
+        "entity": "sent_polarity"
+      },
+      {
+        "start": 50,
+        "end": 58,
+        "value": "earnings",
+        "entity": "aspect_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sent_polarity",
+        "start": 33,
+        "end": 45,
+        "extractor": "DIETClassifier",
+        "value": "poor outlook"
+      },
+      {
+        "entity": "aspect_type",
+        "start": 50,
+        "end": 58,
+        "extractor": "DIETClassifier",
+        "value": "earnings"
+      }
+    ]
+  },
+  {
+    "text": "but if rasa is open source why do you have a sales team",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "aspect_type",
+        "start": 45,
+        "end": 50,
+        "extractor": "DIETClassifier",
+        "value": "sales"
+      }
+    ]
+  }
+]

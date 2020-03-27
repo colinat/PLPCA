@@ -19,7 +19,8 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from rasa_sdk.events import FollowupAction
 
-filename = 'predicted_Western Union Co_20170502-Text.csv'
+#filename = 'data/predicted_Western Union Co_20170502-Text.csv'
+filename = 'data/output.csv'
 listOfAspects = ['sales','earnings','op_costs','products_services','organic_expansion','acquisitions','competition','op_risks','debt']
 listOfSents = ['Positive','Neutral','Negative']
 

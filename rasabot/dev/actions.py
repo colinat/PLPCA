@@ -83,6 +83,7 @@ class ActionGetSentiment(Action):
                         level = "mildly"
                     # return bot's response
                     dispatcher.utter_message("There are {} mentions associated with {}. They are {} {} (~{}%).".format(num_sent, aspect, level, sentiment, pct))
+                    return [FollowupAction("action_respond_emotion")]
                 # exception handling: initialise to neutral sentiment if not able to retrieve.
                 else:
                     # return bot's response

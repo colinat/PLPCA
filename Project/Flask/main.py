@@ -12,7 +12,7 @@ import ployTest as poly
 #import Transcript_py3 as py3
 import os
 
-# create the application object
+# create the application object 
 app = Flask(__name__)
 flag = False
 

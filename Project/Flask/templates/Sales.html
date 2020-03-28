@@ -11,21 +11,27 @@ Created on Thu Mar 19 10:18:10 2020
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <style>
+    img.resize {
+      width:350px;
+      height:300px;
+    }
+    </style>
     <title>Sales - NLP Project</title>
   </head>
   <body>
     {% extends "template.html" %}
     
     {% block content1 %}
-        <img src="static/images/salesS.png", alt="salesS">
+        <img class="resize" src="static/images/salesS.png", alt="salesS">
     {% endblock %}
     
     {% block content2 %}
-        <img src="static/images/salesES.png", alt="salesES">
+        <img class="resize" src="static/images/salesES.png", alt="salesES">
     {% endblock %}
     
     {% block content3 %}
-        <img src="static/images/salesFC.png", alt="salesFC">
+        <img class="resize" src="static/images/salesFC.png", alt="salesFC">
     {% endblock %}
   </body>
 </html>

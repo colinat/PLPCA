@@ -1,0 +1,219 @@
+<!--#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Mar 19 10:24:40 2020
+
+@author: mj
+"""
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NLP Project</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 0px;
+  height: 100px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 15%;
+  height: 450px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: right;
+  padding: 20px;
+  width: 85%;
+  background-color: #f1f1f1;
+  height: 450px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  clear:both;
+  background-color: #777;
+  padding: 30px;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-margin-top-collapse: discard;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 700px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  height:100%;
+  overflow: hidden;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  float: center;
+  clear: both;
+  display: flex;
+}
+
+div.row {
+width: 100%;
+height:auto;
+}
+
+/* Below styling is for chatbot */
+.conversation-container .header {
+	background-color: #9b004f
+}
+
+.conversation-container .client {
+	background-color: #9b004f
+}
+
+.conversation-container .close-button {
+	background-color: #9b004f
+}
+
+.launcher {
+	background-color: #9b004f
+}
+</style>
+</head>
+
+<body>
+<div id="webchat"/>
+<!--<script src="https://storage.googleapis.com/mrbot-cdn/webchat-latest.js"></script>-->
+<script src="https://storage.googleapis.com/mrbot-cdn/webchat-0.6.0.js"></script>
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/get_started",
+	interval:5000,
+    customData: { "language": "en" },   // arbitrary custom data. Stay minimal as this will be added to the socket 
+    socketUrl: "http://localhost:5005",
+    socketPath: "/socket.io/",	
+    title: "Sara",
+    subtitle: "I'm still in development phase!!!",
+	inputTextFieldHint: "Type a message...",
+	connectingText: "Waiting for server...",
+	hideWhenNotConnected: true,
+	fullScreenMode: false,
+	showFullScreenButton: true,
+	badge: 0,
+	profileAvatar: "static/images/tia-chatbot.png",
+	closeLauncherImage: "static/images/close.png",
+	openLauncherImage: "static/images/tia-chatbot.png",
+	displayUnreadCount: true,
+	showMessageDate: true,
+    docViewer: false,
+	params: {
+		images: {
+			dims: {
+				width: 300,
+				height: 200,
+			}
+		},
+		storage: "session"
+	},	
+	connectOn: "open"
+  })
+</script>
+    
+    <header>
+      <h2>NLP Project!!!</h2>
+    </header>
+
+    <section>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('Upload') }}">Upload Transcript</a></li>
+          <li><a href="{{ url_for('OpCost') }}">Operational Cost</a></li>
+          <li><a href="{{ url_for('ProductServices') }}">Product Services</a></li>
+          <li><a href="{{ url_for('Sales') }}">Sales</a></li>
+          <li><a href="{{ url_for('Earnings') }}">Earnings</a></li>
+          <li><a href="{{ url_for('Acquisitions') }}">Acquisitions</a></li>
+          <li><a href="{{ url_for('Competition') }}">Competition</a></li>
+          <li><a href="{{ url_for('OpRisks') }}">Operational Risks</a></li>
+          <li><a href="{{ url_for('Debt') }}">Debt</a></li>
+          <li><a href="{{ url_for('About') }}">About</a></li>
+        </ul>
+      </nav>
+  
+      <article>    
+            <div class="row" style="text-align: center; height: 50px; font-size: 25px; color: #9b004f;">
+                <caption>Transcript's Sentiment Analysis {{content[0]}}</caption>
+            </div> 
+    
+            <div class="row" style="height: 400px;">
+              <div class="column">
+                {% block content1 %}
+                {% endblock %}
+              </div>
+              
+              <div class="column">
+                {% block content2 %}
+                {% endblock %}
+              </div>
+              
+              <div class="column">
+                {% block content3 %}
+                {% endblock %}
+              </div>
+            </div>  
+      </article>
+    </section>
+
+    <footer>
+      <div class="footerblock">
+          <p>Your mentorship and advice is appreciated!!!</p>
+      </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+2020-03-23 11:07:30,679 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-03-23 11:32:33,418 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhook'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook not found
+2020-03-23 11:34:49,594 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2020-03-23 11:34:49,716 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks not found
+2020-03-23 11:34:49,722 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhook'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook not found
+2020-03-23 11:35:12,281 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhook'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook not found
+2020-03-23 11:39:16,592 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 1167, in run
+    serve(**server_settings)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\server.py", line 920, in serve
+    loop.run_forever()
+  File "a:\anaconda3\envs\chatbot\lib\asyncio\base_events.py", line 538, in run_forever
+    self._run_once()
+  File "a:\anaconda3\envs\chatbot\lib\asyncio\base_events.py", line 1746, in _run_once
+    event_list = self._selector.select(timeout)
+  File "a:\anaconda3\envs\chatbot\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "a:\anaconda3\envs\chatbot\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\socketio\client.py", line 25, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2020-03-23 11:39:37,048 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-03-23 11:50:26,727 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 1167, in run
+    serve(**server_settings)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\server.py", line 920, in serve
+    loop.run_forever()
+  File "a:\anaconda3\envs\chatbot\lib\asyncio\base_events.py", line 538, in run_forever
+    self._run_once()
+  File "a:\anaconda3\envs\chatbot\lib\asyncio\base_events.py", line 1746, in _run_once
+    event_list = self._selector.select(timeout)
+  File "a:\anaconda3\envs\chatbot\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "a:\anaconda3\envs\chatbot\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\socketio\client.py", line 25, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2020-03-23 11:50:43,284 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-03-23 11:51:20,046 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhook'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook not found
+2020-03-23 11:51:36,728 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/stop'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /stop not found
+2020-03-23 11:56:08,188 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/Stop'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /Stop not found
+2020-03-23 11:56:14,722 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/stop'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /stop not found
+2020-03-23 11:56:18,512 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/exit'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /exit not found
+2020-03-23 11:56:59,045 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/model/test/intents'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 452, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /model/test/intents
+2020-03-23 11:57:10,106 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/model'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 452, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /model
+2020-03-23 11:57:18,152 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/model'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 452, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /model
+2020-03-23 12:01:00,750 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhook'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook not found
+2020-03-23 12:01:21,057 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\router.py", line 452, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /webhooks/rest/webhook
+2020-03-23 18:49:37,438 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\app.py", line 1167, in run
+    serve(**server_settings)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\sanic\server.py", line 920, in serve
+    loop.run_forever()
+  File "a:\anaconda3\envs\chatbot\lib\asyncio\base_events.py", line 538, in run_forever
+    self._run_once()
+  File "a:\anaconda3\envs\chatbot\lib\asyncio\base_events.py", line 1746, in _run_once
+    event_list = self._selector.select(timeout)
+  File "a:\anaconda3\envs\chatbot\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "a:\anaconda3\envs\chatbot\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "a:\anaconda3\envs\chatbot\lib\site-packages\socketio\client.py", line 25, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt

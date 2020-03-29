@@ -10,6 +10,7 @@ intents:
   - bot_challenge
   - out_of_scope
   - ask_what_can_u_do
+  - get_started
 
 entities:
   - aspect_type

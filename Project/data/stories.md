@@ -2,6 +2,9 @@
 * greet
   - utter_greet
 
+## startbot
+* get_started
+  - utter_greet
 
 ## query sentiment on sales
 * query_sentiment{"aspect_type":"sales"}

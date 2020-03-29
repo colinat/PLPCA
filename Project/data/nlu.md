@@ -129,6 +129,8 @@
 - What has been the biggest [unexpected](sent_polarity) [cost](aspect_type:op_costs) that has impacted the company in the previous quarter?
 - How is the company planning to reduce [overheads](aspect_type:op_costs) in the near term?
 - Which are some of the [rising costs](sent_polarity:negative) that management foresee will hit the company's [bottom line](aspect_type:earnings) this year?
+- Get me a sentence on [revenue](aspect_type:sales)
+- Can you get me a sentence?
 
 ## intent:out_of_scope
 - I want to order food

@@ -1,138 +1,290 @@
 [
   {
-    "text": "bonjour",
+    "text": "good morning",
     "intent": "greet",
     "intent_prediction": {
       "name": "goodbye",
-      "confidence": 0.4971947968006134
+      "confidence": 0.4319605529308319
     }
   },
   {
-    "text": "ey boss",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.5836247801780701
-    }
-  },
-  {
-    "text": "good evening",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.7770878076553345
-    }
-  },
-  {
-    "text": "greet",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.838652491569519
-    }
-  },
-  {
-    "text": "greetings",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.4336658716201782
-    }
-  },
-  {
-    "text": "halloooo",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.7542825937271118
-    }
-  },
-  {
-    "text": "hello is anybody there",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "bot_challenge",
-      "confidence": 0.5203309655189514
-    }
-  },
-  {
-    "text": "hello, my name is Charles Pfeffer",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "bot_challenge",
-      "confidence": 0.5601904988288879
-    }
-  },
-  {
-    "text": "i am Karen Mease",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "bot_challenge",
-      "confidence": 0.9686203002929688
-    }
-  },
-  {
-    "text": "yo",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.6214944124221802
-    }
-  },
-  {
-    "text": "yoo",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.9408131241798401
-    }
-  },
-  {
-    "text": "What are some sentences that reflect high emotions?",
-    "intent": "emotionscore",
-    "intent_prediction": {
-      "name": "bot_challenge",
-      "confidence": 0.6718706488609314
-    }
-  },
-  {
-    "text": "Is the CEO confident?",
-    "intent": "emotionscore",
-    "intent_prediction": {
-      "name": "bot_challenge",
-      "confidence": 0.5218764543533325
-    }
-  },
-  {
-    "text": "Is the tone of the CEO confident?",
-    "intent": "emotionscore",
-    "intent_prediction": {
-      "name": "bot_challenge",
-      "confidence": 0.7646512389183044
-    }
-  },
-  {
-    "text": "thanks for forum link, I'll check it out",
-    "intent": "thanks",
-    "intent_prediction": {
-      "name": "bot_challenge",
-      "confidence": 0.6540050506591797
-    }
-  },
-  {
-    "text": "tqvm",
-    "intent": "thanks",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.37593868374824524
-    }
-  },
-  {
-    "text": "TQVM",
-    "intent": "thanks",
+    "text": "farewell",
+    "intent": "goodbye",
     "intent_prediction": {
       "name": "greet",
-      "confidence": 0.5883267521858215
+      "confidence": 0.45305246114730835
+    }
+  },
+  {
+    "text": "Should we expect to see a net impact in margin?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.6465016007423401
+    }
+  },
+  {
+    "text": "How is the company planning to reduce overheads in the near term?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.8266373872756958
+    }
+  },
+  {
+    "text": "What's do YouTube do",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.437726765871048
+    }
+  },
+  {
+    "text": "can you learn from our conversation?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.457047700881958
+    }
+  },
+  {
+    "text": "cannot see",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6372416615486145
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.28021982312202454
+    }
+  },
+  {
+    "text": "acquisitions",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.8251233100891113
+    }
+  },
+  {
+    "text": "What is holding back the sales growth this quarter?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.6152398586273193
+    }
+  },
+  {
+    "text": "Which are some of the rising costs that management foresee will hit the company's bottom line this year?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.6934293508529663
+    }
+  },
+  {
+    "text": "What do you prefer?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_what_can_u_do",
+      "confidence": 0.6728806495666504
+    }
+  },
+  {
+    "text": "What makes you better than a human?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.2530146539211273
+    }
+  },
+  {
+    "text": "again?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.7038435935974121
+    }
+  },
+  {
+    "text": "hey there",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.41311922669410706
+    }
+  },
+  {
+    "text": "see you later",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.531948447227478
+    }
+  },
+  {
+    "text": "gotta go",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.5157975554466248
+    }
+  },
+  {
+    "text": "thnaks",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.2703741788864136
+    }
+  },
+  {
+    "text": "sales",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.317058265209198
+    }
+  },
+  {
+    "text": "earnings",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentence",
+      "confidence": 0.6123853921890259
+    }
+  },
+  {
+    "text": "products_services",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.9970871806144714
+    }
+  },
+  {
+    "text": "organic_expansion",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.681021511554718
+    }
+  },
+  {
+    "text": "Should we expect to see a net impact in sales?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "query_sentence",
+      "confidence": 0.8597339987754822
+    }
+  },
+  {
+    "text": "How have our acquisitions performed?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.37011921405792236
+    }
+  },
+  {
+    "text": "Will I make money from this stock this year?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.5865512490272522
+    }
+  },
+  {
+    "text": "What's driving the more optimistic expectation for sales?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.5046053528785706
+    }
+  },
+  {
+    "text": "Any changes in the sales trends?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.5663127303123474
+    }
+  },
+  {
+    "text": "I can barely see this white text on light gray background ...",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentence",
+      "confidence": 0.3222132623195648
+    }
+  },
+  {
+    "text": "chinese ok?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.22828108072280884
+    }
+  },
+  {
+    "text": "competition",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.6504947543144226
+    }
+  },
+  {
+    "text": "So should we expect a reversal or a benefit in the fourth quarter?",
+    "intent": "query_sentiment",
+    "intent_prediction": {
+      "name": "query_sentence",
+      "confidence": 0.396724134683609
+    }
+  },
+  {
+    "text": "Are earnings performing in line with expectations?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.3981628119945526
+    }
+  },
+  {
+    "text": "Why have sales not been up to expectations?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.6098741292953491
+    }
+  },
+  {
+    "text": "Will the guidance of 5% be higher than what the company has done throughout the course of this year?",
+    "intent": "query_sentence",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.5391003489494324
+    }
+  },
+  {
+    "text": "Recharge",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.1620997041463852
+    }
+  },
+  {
+    "text": "can you speak about politic ?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "query_sentiment",
+      "confidence": 0.646030843257904
     }
   }
 ]

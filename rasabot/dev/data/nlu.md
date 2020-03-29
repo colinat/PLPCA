@@ -150,7 +150,7 @@
 - What are some of CEO's views on potential [market share](aspect_type:organic_expansion) increase?
 - Why is outlook for [earnings](aspect_type:earnings) so [bad](sent_polarity:negative)?
 - What are some justifications for [poor](sent_polarity:negative) outlook for [earnings](aspect_type:earnings)?
-
+- Can you get me a sentence on CEO's thoughts on sales?
 
 ## intent:out_of_scope
 - I want to order food

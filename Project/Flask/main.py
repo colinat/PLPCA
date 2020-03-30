@@ -9,7 +9,7 @@ Created on Thu Mar 19 10:11:26 2020
 # import the Flask class from the flask module
 from flask import Flask, render_template, request
 import ployTest as poly
-import Transcript_pyfinal as py3
+#import Transcript_pyfinal as py3
 import os
 #import logging
 
@@ -63,7 +63,7 @@ def upload():
         flag = False
         if flag == False :
             print("filenameWithLocation - ", filenameWithLocation)
-            py3.getcsv(filenameWithLocation)
+            #py3.getcsv(filenameWithLocation)
             flag = poly.plotAllAspects(folderLocation) 
             print(flag)
             return render_template("sales.html", content=["Transcript's Sentiment Analysis for Aspect - Sales"])

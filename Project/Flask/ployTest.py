@@ -32,7 +32,7 @@ def plotBarChart(cwd, sentiment, sentiment_score, ylabel, aspect, title = "'s As
     plt.title(aspect + title)
     plt.bar(xpos, sentiment_score)
     #plt.legend()
-    savePlot(cwd, plt, aspect + "_S")
+    savePlot(cwd, plt, aspect + "S")
     plt.clf()
     plt.cla()
     plt.close()
@@ -43,7 +43,7 @@ def plotPieChart(cwd, emotional_sentiment_score, emotional_sentiment, aspect, ti
     ax.pie(emotional_sentiment_score,labels=emotional_sentiment, radius=1.5, autopct='%1.1f%%', shadow=True, explode=[0.1,0,0.2,0.1], startangle=180)
     ax.axis("equal")
     ax.set_title(aspect + title)
-    savePlot(cwd, plt, aspect + "_E")
+    savePlot(cwd, plt, aspect + "ES")
     plt.clf()
     plt.cla()
     plt.close()
@@ -51,7 +51,7 @@ def plotPieChart(cwd, emotional_sentiment_score, emotional_sentiment, aspect, ti
 def plotLine(cwd, fd, aspect):
     plot = fd.plot(10)
     fig = plot.get_figure()
-    savePlot(cwd, fig, aspect + "_F")
+    savePlot(cwd, fig, aspect + "FC")
     
 def savePlot(cwd, plt, aspect):
     plt.savefig(cwd+"/static/images/" + aspect + ".png", bbox_inches='tight', pad_inches=0.1, transprarent=True)

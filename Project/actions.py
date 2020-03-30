@@ -76,7 +76,7 @@ class ActionGetSentiment(Action):
 
                 level = ""
                 if sentiment is not None:
-                    sentiment = sentiment[2:]
+                    #sentiment = sentiment[2:]
                     count = result.iloc[0,1]
                     pct = round(count/num_sent*100,0)
 
@@ -151,7 +151,7 @@ class ActionGetEmotion(Action):
                 emotion = result.iloc[0,0]
 
                 if (emotion is not None) and (emotion.find("NIL") == -1):
-                    emotion = emotion[2:]
+                    #emotion = emotion[2:]
                     count = result.iloc[0,1]
                     pct = round(count/num_sent*100,0)
                     # return bot's response
@@ -203,7 +203,7 @@ class ActionGetSentence(Action):
             #sql = f"SELECT text, Sentiment, Emotion, {aspect} FROM df where {aspect} > {threshold} ORDER BY {aspect} DESC" # replaced
             
             # newly added code
-            sql = f"SELECT text, Sentiment, Emotion, Aspect, {aspect} FROM df where Aspect LIKE '%{aspect}%' ORDER BY {aspect} DESC"
+            sql = f"SELECT Sentence, Sentiment, Emotion, Aspect, {aspect} FROM df where Aspect LIKE '%{aspect}%' ORDER BY {aspect} DESC"
             subquery = ps.sqldf(sql, locals())
             
             # return if query retrieves zero text relevant to the aspect
@@ -216,18 +216,18 @@ class ActionGetSentence(Action):
                 # case switch on sentiment: query sentences with only the respective sentiment, else retrieve all sentences
                 def switcherSent (args):
                     switcher = {
-                        'positive': f"SELECT text, sentiment, emotion FROM subquery WHERE sentiment like '%{sentiment}%'",
-                        'negative': f"SELECT text, sentiment, emotion FROM subquery WHERE sentiment like '%{sentiment}%'",
-                        'neutral':  f"SELECT text, sentiment, emotion FROM subquery WHERE sentiment like '%{sentiment}%'"
+                        'positive': f"SELECT Sentence, sentiment, emotion FROM subquery WHERE sentiment like '%{sentiment}%'",
+                        'negative': f"SELECT Sentence, sentiment, emotion FROM subquery WHERE sentiment like '%{sentiment}%'",
+                        'neutral':  f"SELECT Sentence, sentiment, emotion FROM subquery WHERE sentiment like '%{sentiment}%'"
                     }
-                    return switcher.get(args,"SELECT text, sentiment, emotion FROM subquery")
+                    return switcher.get(args,"SELECT Sentence, sentiment, emotion FROM subquery")
 
                 sql = switcherSent(sentiment)
                 subquery2 = ps.sqldf(sql, locals())
                 # randomly pick a sentence 
                 randomRow = subquery2.sample()
                 stmt = randomRow.iloc[0,0]
-                emotion = randomRow.iloc[0,2][2:]
+                emotion = randomRow.iloc[0,2]
                 
                 if emotion == "NIL": 
                     dispatcher.utter_message("Entity: {}".format(aspect))

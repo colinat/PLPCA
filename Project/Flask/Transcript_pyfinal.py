@@ -28,7 +28,7 @@ n_gpu = torch.cuda.device_count()
 from transformers import BertTokenizer
 from transformers import BertForSequenceClassification, AdamW, BertConfig
 ROOT_PATH = os.path.dirname(os.path.abspath('__file__'))
-modelLocation = ROOT_PATH.replace('Flask', 'data/model_save_MultiClass')
+modelLocation = ROOT_PATH.replace('Flask', 'data')
 print('modelLocation - ', modelLocation)
     
 def modelloader(my_model = 'Aspect'):

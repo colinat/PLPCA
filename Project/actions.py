@@ -38,6 +38,8 @@ class ActionGetSentiment(Action):
         # return if aspect not found among valid list
         if aspect not in listOfAspects:
             # return bot's response
+            dispatcher.utter_message("Entity: {}".format(aspect))
+            dispatcher.utter_message("Intent: Get Sentiment")
             dispatcher.utter_message("{} isn't a valid aspect I can handle.".format(aspect))
             return [FollowupAction("utter_suggest_aspect")]
         
@@ -49,7 +51,10 @@ class ActionGetSentiment(Action):
             threshold = 0.6
 
             # extract out sentences associated with specified aspect
-            sql = f"SELECT Sentiment, {aspect} FROM df where {aspect} > {threshold}"
+            #sql = f"SELECT Sentiment, {aspect} FROM df where {aspect} > {threshold}" # replaced
+            
+            sql = f"SELECT Sentiment, Aspect FROM df where Aspect LIKE '%{aspect}%'" # newly ammended code
+            
             subquery = ps.sqldf(sql, locals())
             subquery2 = ps.sqldf("SELECT Sentiment, COUNT(Sentiment) As count FROM subquery GROUP BY Sentiment", locals())
 
@@ -61,6 +66,8 @@ class ActionGetSentiment(Action):
             if num_sent is None:
                 num_sent = 0
                 # return bot's response
+                dispatcher.utter_message("Entity: {}".format(aspect))
+                dispatcher.utter_message("Intent: Get Sentiment.")
                 dispatcher.utter_message("Unfortunately, it seems there isn't any notable mentions relating to {}.".format(aspect))
             else:       
                 # get associated sentiment to that aspect
@@ -82,10 +89,14 @@ class ActionGetSentiment(Action):
                     else:
                         level = "mildly"
                     # return bot's response
+                    dispatcher.utter_message("Entity: {}".format(aspect))
+                    dispatcher.utter_message("Intent: Get Sentiment")
                     dispatcher.utter_message("There are {} mentions associated with {}. They are {} {} (~{}%).".format(num_sent, aspect, level, sentiment, pct))
                 # exception handling: initialise to neutral sentiment if not able to retrieve.
                 else:
                     # return bot's response
+                    dispatcher.utter_message("Entity: {}".format(aspect))
+                    dispatcher.utter_message("Intent: Get Sentiment")
                     dispatcher.utter_message("I'm terribly sorry. It seems there's a technical issue: I'm unable to retrieve any sentiment somehow.")
             return []
         
@@ -104,6 +115,8 @@ class ActionGetEmotion(Action):
         # return if aspect not found among valid list
         if aspect not in listOfAspects:
             # return bot's response
+            dispatcher.utter_message("Entity: {}".format(aspect))
+            dispatcher.utter_message("Intent: Get Emotion")
             dispatcher.utter_message("{} isn't a valid aspect I can handle.".format(aspect))
             return [FollowupAction("utter_suggest_aspect")]
         
@@ -115,7 +128,9 @@ class ActionGetEmotion(Action):
             threshold = 0.6
 
             # extract out sentences associated with specified aspect
-            sql = f"SELECT Emotion, {aspect} FROM df where {aspect} > {threshold}"
+            #sql = f"SELECT Emotion, {aspect} FROM df where {aspect} > {threshold}" # replaced
+            sql = f"SELECT Emotion, Aspect FROM df where Aspect LIKE '%{aspect}%'" # newly ammended code
+            
             subquery = ps.sqldf(sql, locals())
             subquery2 = ps.sqldf("SELECT Emotion, COUNT(Emotion) As count FROM subquery GROUP BY Emotion", locals())
 
@@ -127,6 +142,8 @@ class ActionGetEmotion(Action):
             if num_sent is None:
                 num_sent = 0
                 # return bot's response
+                dispatcher.utter_message("Entity: {}".format(aspect))
+                dispatcher.utter_message("Intent: Get Emotion")
                 dispatcher.utter_message("Unfortunately, it seems there isn't any notable mentions relating to {}.".format(aspect))
             else:       
                 # get associated sentiment to that aspect
@@ -138,10 +155,14 @@ class ActionGetEmotion(Action):
                     count = result.iloc[0,1]
                     pct = round(count/num_sent*100,0)
                     # return bot's response
+                    dispatcher.utter_message("Entity: {}".format(aspect))
+                    dispatcher.utter_message("Intent: Get Emotion")
                     dispatcher.utter_message("With respect to {}, management sounded a general {}(~{}%) tone to it.".format(aspect, emotion, pct))   
                 # exception handling: initialise to neutral sentiment if not able to be retrieved.
                 else:
                     # return bot's response
+                    dispatcher.utter_message("Entity: {}".format(aspect))
+                    dispatcher.utter_message("Intent: Get Emotion")
                     dispatcher.utter_message("There is generally an apathetic tone with regards to {}.".format(aspect))
             return []
                 
@@ -160,6 +181,8 @@ class ActionGetSentence(Action):
         # return if aspect not found among valid list
         if aspect not in listOfAspects:
             # return bot's response
+            dispatcher.utter_message("Entity: {}".format(aspect))
+            dispatcher.utter_message("Intent: Get Sentence")
             dispatcher.utter_message("{} isn't a valid aspect I can handle.".format(aspect))
             return [FollowupAction("utter_suggest_aspect")]
         
@@ -177,11 +200,16 @@ class ActionGetSentence(Action):
                 emotion = emotion.lower() # convert to lower case
             
             # extract out sentences associated with specified aspect
-            sql = f"SELECT text, Sentiment, Emotion, {aspect} FROM df where {aspect} > {threshold} ORDER BY {aspect} DESC"
+            #sql = f"SELECT text, Sentiment, Emotion, {aspect} FROM df where {aspect} > {threshold} ORDER BY {aspect} DESC" # replaced
+            
+            # newly added code
+            sql = f"SELECT text, Sentiment, Emotion, Aspect, {aspect} FROM df where Aspect LIKE '%{aspect}%' ORDER BY {aspect} DESC"
             subquery = ps.sqldf(sql, locals())
             
             # return if query retrieves zero text relevant to the aspect
             if len(subquery) <= 0:
+                dispatcher.utter_message("Entity: {}".format(aspect))
+                dispatcher.utter_message("Intent: Get Sentence")
                 dispatcher.utter_message("Unfortunately, it seems there isn't any notable mentions relating to {}.".format(aspect))
 
             else:
@@ -202,9 +230,16 @@ class ActionGetSentence(Action):
                 emotion = randomRow.iloc[0,2][2:]
                 
                 if emotion == "NIL": 
-                    dispatcher.utter_message("One notable mention with respect to {} is this: \"{}\".".format(aspect,stmt))
+                    dispatcher.utter_message("Entity: {}".format(aspect))
+                    dispatcher.utter_message("Intent: Get Sentence")
+                    dispatcher.utter_message("One notable mention with respect to {} is this:".format(aspect))
+                    dispatcher.utter_message("\"{}\".".format(stmt))
                 else:
-                    dispatcher.utter_message("One notable mention with respect to {} is this: \"{}\".\nManagement sounded {} on this statment".format(aspect,stmt, emotion))
+                    dispatcher.utter_message("Entity: {}".format(aspect))
+                    dispatcher.utter_message("Intent: Get Sentence")
+                    dispatcher.utter_message("One notable mention with respect to {} is this:".format(aspect))
+                    dispatcher.utter_message("\"{}\".".format(stmt))
+                    dispatcher.utter_message("Management sounded {} on this statement".format(emotion))
             return []
     
     

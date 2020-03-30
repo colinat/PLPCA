@@ -11,22 +11,60 @@ Created on Thu Mar 19 10:18:10 2020
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <style>
+    .column1 {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+      height:100%;
+      overflow: hidden;
+    }
+
+    /* Clearfix (clear floats) */
+    .row1::after {
+      content: "";
+      float: center;
+      clear: both;
+      display: flex;
+    }
+    
+    div.team {
+          position: relative;
+          padding: 10px;
+          bottom:0px;
+          right: 50px;
+    }
+    </style>
     <title>About Flask</title>
   </head>
   <body>
     {% extends "template.html" %}
     
     {% block content1 %}
-    <h1> About Flask </h1>
-    <p> Flask is a micro web framework written in Python.</p>
-    <p> Applications that use the Flask framework include Pinterest,
-      LinkedIn, and the community web page for Flask itself.</p>
+    <h3 style="font-size: 15px;">BUSINESS CASE</h3>
+    <p align="justify" style="font-size: 13px;"> We seek to extract sentiments from a list of S&P 500 companies’ transcripts via feature engineering of financial/emotional aspects. Machine learning techniques would be deployed to predict and identify aspects as well as key sentiment scores for each of these aspects for unlabelled transcripts. Our trained model could then be used to parse transcripts users upload for aspect and sentiment mining purposes. These sentiment scores can also be used to predict future price movements.</p>
     {% endblock %}
     
     {% block content2 %}
+    <h3 style="font-size: 15px;">SCOPE</h3>
+    <p align="justify" style="font-size: 13px;"> The aim of our system and model is to provide an application that will parse an earnings text transcript uploaded by investors/analysts/banks to quickly identify key aspects and respective sentiment scores, which in turn will be used for their various business purposes. Examples could include forecasting share prices or assessing for major changes in the credit worthiness of companies.</p>
+    <h3 style="font-size: 15px;">CHATBOT BRIEF</h3>
+    <p align="justify" style="font-size: 13px;">conversational user interface (UI) that is targeted at specific audience (analysts, investors) will be built. This UI will serve to aid users whom are keen to have a quick interaction with an Artificial Intelligence chatbot to query key elements of the firm’s performance being discussed and emotional aspects of the CEO responding to the questions in the conference call for the appropriate answers. These responses to the queries could potentially help users in the above-mentioned use cases, such as to better gauge/predict the firm’s future financial performance, which in turn could affect the share price correspondingly.</p>
     {% endblock %}
     
     {% block content3 %}
+    <h3 style="font-size: 15px; text-align:center">TEAM MEMBER WITH MATRICULATION NUMBER</h3>
+    <div class="team">
+      			<b>
+          			<pre style="font-size: 13px;">
+            1. MRITUNJAY KUMAR       (A0198457J)
+            2. SUM KWOK HOONG        (A0198480R)
+            3. TAN DEHONG            (A0198547J)
+            4. TAN WEE HAN COLIN     (A0198498Y)
+            5. LOW JIA SHENG NELSON  (A0055398R)
+          			</pre>
+          		</b>
+    </div>  
     {% endblock %}
   </body>
 </html>

@@ -17,23 +17,33 @@ Created on Thu Mar 19 10:18:10 2020
         width: middle;
         margin: 0 auto;
       }
+      
+      div.c {
+          position: relative;
+          padding: 10px;
+          left: 75px;
+    } 
     </style>
   </head>
   <body>
     {% extends "template.html" %}
     
     {% block content1 %}
-        <div id="loading"></div>
-        <div id="content">
-            <form action="/upload" method="post" enctype="multipart/form-data">
-                Choose the file: <input type="file" name="file"/> <Br>
-				Transcript File Name: <input type="text" placeholder="Enter Transcript name" name = "name"/><BR>
-                <input type="submit" value="Upload" onclick="loading();"/>
-            </form> 
-        </div>
     {% endblock %}
     
     {% block content2 %}
+        <div id="loading"></div>
+        <div id="content">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <h3> Upload Transcript file here:</h3> 
+                <center>
+                    <input type="file" name="file" style="text-align: center; font-size: 15px;"/> <Br>
+                </center>
+                <div class="c">
+                    <input type="submit" value="Upload" onclick="loading();" style="text-align: center; font-size: 15px; width:auto"/>
+                </div>
+            </form> 
+        </div>
     {% endblock %}
     
     {% block content3 %} 

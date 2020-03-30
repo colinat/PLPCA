@@ -9,20 +9,32 @@ Created on Thu Mar 19 10:11:26 2020
 # import the Flask class from the flask module
 from flask import Flask, render_template, request
 import ployTest as poly
-#import Transcript_py3 as py3
+#import Transcript_pyfinal as py3
 import os
+#import logging
 
 # create the application object 
 app = Flask(__name__)
 
 flag = False
 
-ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
+ROOT_PATH = os.path.dirname(os.path.abspath('__file__'))
+#ROOT_PATH = str(os.chdir(r"C:\Users\MJ\dev\Flask"))
+
+@app.errorhandler(500)
+def internal_server_error(error):
+    app.logger.error('Server Error: %s', (error))
+    return render_template("error.html", content=["Oops Something Wrong...!!!"]), 500
+
+@app.errorhandler(Exception)
+def unhandled_exception(e):
+    app.logger.error('Unhandled Exception: %s', (e))
+    return render_template("error.html", content=["Oops Something Wrong...!!!"]), 500
 
 # inbuilt function which takes error as parameter 
 @app.errorhandler(404)
 def not_found(e): 
-  return render_template("error.html", content=["Oops Something Wrong...!!!"])
+  return render_template("error.html", content=["Oops Something Wrong...!!!"]), 404
 
 @app.route('/Upload', methods=['GET', 'POST'])
 @app.route("/", methods=['GET', 'POST'])
@@ -40,19 +52,18 @@ def Upload():
 def upload():
     print("inside upload")
     file = request.files['file']
-    name = request.values['name']
+    #name = request.values['name']
     folderLocation = ROOT_PATH.replace('Flask', 'data')
-    file.save(os.path.join(folderLocation,name))
-    fileLocation = "".join((folderLocation, "\\", name))
-    print("folderLocation - ", fileLocation)
-    if os.path.isfile(fileLocation):
+    file.save(os.path.join(folderLocation,"input.txt"))
+    filenameWithLocation = "".join((folderLocation, "\\", "input.txt"))
+    print("File name with folderLocation - ", filenameWithLocation)
+    if os.path.isfile(filenameWithLocation):
         print("File exist...")
         global flag
         flag = False
         if flag == False :
-            """
-            py3.getcsv(folderLocation+"/input.txt")
-            """
+            print("filenameWithLocation - ", filenameWithLocation)
+            #py3.getcsv(filenameWithLocation)
             flag = poly.plotAllAspects(folderLocation) 
             print(flag)
             return render_template("sales.html", content=["Transcript's Sentiment Analysis for Aspect - Sales"])
